@@ -1,0 +1,242 @@
+<app-header></app-header>
+<header>
+  <button (click)="personalInfo()">Personal details</button>
+</header>
+<dialog class="personalDetails">
+
+  <form [formGroup]="personalForms" (ngSubmit)="personalSubmit()">
+    <h2>Education Loan Application form</h2>
+    <h3>Personal details</h3>
+    <div class="grid">
+      <div class="grid-first">
+        <label for="name">First Name:</label>
+        <input type="text" id="firstname" name="firstname" formControlName="firstname">
+        <div class="errorContainer" *ngIf="personalForms.controls['firstname'].dirty">
+          <p class="error" *ngIf="personalForms.controls['firstname'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>first Name can't be blank</p>
+          <p class="error" *ngIf="personalForms.controls['firstname'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>first Name contain only alphabets</p>
+  </div>
+  <br>
+
+        <label for="dob">DOB:</label>
+        <input type="date" id="dob" name="dob" formControlName="dob" required>
+        <div class="errorContainer" *ngIf="personalForms.controls['dob'].dirty">
+          <p class="error" *ngIf="personalForms.controls['dob'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>DOB can't be blank</p>
+          <!-- <p class="error" *ngIf="personalForms.controls['firstname'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>User Name contain only alphabets</p> -->
+  </div>
+  <br>
+        <label for="name">Father/guardian name:</label>
+        <input type="text" id="f-name" name="f-name" formControlName="fathername" required>
+        <div class="errorContainer" *ngIf="personalForms.controls['fathername'].dirty">
+          <p class="error" *ngIf="personalForms.controls['fathername'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Father Name can't be blank</p>
+          <p class="error" *ngIf="personalForms.controls['fathername'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Father Name contain only alphabets</p>
+  </div>
+  <br>
+        <label for="name">Mother name:</label>
+        <input type="text" id="m-name" name="m-name"  formControlName="mothername"  required>
+        <div class="errorContainer" *ngIf="personalForms.controls['mothername'].dirty">
+          <p class="error" *ngIf="personalForms.controls['mothername'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Mother name Name can't be blank</p>
+          <p class="error" *ngIf="personalForms.controls['mothername'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Mother name Name contain only alphabets</p>
+  </div>
+  <br>
+        <label for="ctc">Annual CTC:</label>
+        <input type="number" id="ctc" name="ctc" formControlName="ctc" required>
+        <div class="errorContainer" *ngIf="personalForms.controls['ctc'].dirty">
+          <p class="error" *ngIf="personalForms.controls['ctc'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>CTC can't be blank</p>
+          <p class="error" *ngIf="personalForms.controls['ctc'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> Enter valid CTC</p>
+  </div>
+  <br>
+        <label for="blood-grp">Blood group:</label>
+        <select id="blood-grp" name="blood-grp" formControlName="bloodgrp" required>
+          <option value="">Select the Blood group </option>
+          <option value="a+">A+</option>
+          <option value="a-">A-</option>
+          <option value="b+">B+</option>
+          <option value="b-">B-</option>
+          <option value="o+">O+</option>
+          <option value="o-">O-</option>
+          <option value="ab+">AB+</option>
+          <option value="ab-">AB-</option>
+        </select>
+        <div class="errorContainer" *ngIf="personalForms.controls['bloodgrp'].dirty">
+          <p class="error" *ngIf="personalForms.controls['bloodgrp'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>bloodgroup can't be blank</p>
+          <!-- <p class="error" *ngIf="personalForms.controls['blood-grp'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>User Name contain only alphabets</p> -->
+  </div>
+  <br>
+      </div>
+      <div class="grid-second">
+        <label for="name">Last name:</label>
+        <input type="text" id="lastname" name="lastname"  formControlName="lastname" required>
+        <div class="errorContainer" *ngIf="personalForms.controls['lastname'].dirty">
+          <p class="error" *ngIf="personalForms.controls['lastname'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>last Name can't be blank</p>
+          <p class="error" *ngIf="personalForms.controls['lastname'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>last Name contain only alphabets</p>
+  </div>
+  <br>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" formControlName="age" required>
+    <div class="errorContainer" *ngIf="personalForms.controls['age'].dirty">
+      <p class="error" *ngIf="personalForms.controls['age'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Age can't be blank</p>
+      <!-- <p class="error" *ngIf="personalForms.controls['age'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>last Name contain only alphabets</p> -->
+  </div>
+  <br>
+    <label for="occupation">Father/guardian occupation:</label>
+    <input type="text" id="occupation" name="occupation" formControlName="occupation" required>
+    <div class="errorContainer" *ngIf="personalForms.controls['occupation'].dirty">
+      <p class="error" *ngIf="personalForms.controls['occupation'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Occupation can't be blank</p>
+      <p class="error" *ngIf="personalForms.controls['occupation'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Occupation contain only alphabets</p>
+  </div>
+  <br>
+    <label for="occupation">Mother occupation:</label>
+    <input type="text" id="occupation" name="occupation" formControlName="occupation" required>
+    <div class="errorContainer" *ngIf="personalForms.controls['occupation'].dirty">
+      <p class="error" *ngIf="personalForms.controls['occupation'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Occupation can't be blank</p>
+      <p class="error" *ngIf="personalForms.controls['occupation'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Occupation contain only alphabets</p>
+  </div>
+  <br>
+    <label for="sex">Sex:</label>
+    <select id="sex" name="sex" formControlName="sex" required>
+      <!-- <option value="">Select Repayment Period</option> -->
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="others">Others</option>
+    </select>
+    <div class="errorContainer" *ngIf="personalForms.controls['sex'].dirty">
+      <p class="error" *ngIf="personalForms.controls['sex'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>sex can't be blank</p>
+      <!-- <p class="error" *ngIf="personalForms.controls['sex'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Occupation contain only alphabets</p> -->
+  </div>
+  <br>
+    <label for="ph-number">Phone number:</label>
+    <input type="text" id="ph-num" name="ph-num" formControlName="Phoneno" required>
+    <div class="errorContainer" *ngIf="personalForms.controls['Phoneno'].dirty">
+      <p class="error" *ngIf="personalForms.controls['Phoneno'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Phoneno can't be blank</p>
+      <p class="error" *ngIf="personalForms.controls['Phoneno'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> Enter valid phone number</p>
+  </div>
+  <br>
+      </div>
+    </div>
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" formControlName="address"></textarea>
+    <div class="errorContainer" *ngIf="personalForms.controls['address'].dirty">
+      <p class="error" *ngIf="personalForms.controls['address'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>address can't be blank</p>
+      <!-- <p class="error" *ngIf="personalForms.controls['address'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> Enter valid phone number</p> -->
+  </div>
+    <br>
+  <button [disabled]="!personalForms.valid" (click)="studyInfo()" >Next</button>
+  </form>
+</dialog>
+<dialog class="studyForms">
+  <form action="">
+    <h2>Study details</h2>
+    <h3>SSLC</h3>
+    <div class="grid">
+      <div class="grid-first">
+        <label for="reg-no">Register NO:</label>
+        <input type="text" id="Reg-no" name="reg-no" required>
+        <label for="scl-name">School Name:</label>
+        <input type="text" id="scl-name" name="scl-name" required>
+        <label for="mark">SSLC mark:</label>
+        <input type="text" id="mark" name="mark" required>
+        <label for="passing">Year of passing:</label>
+        <input type="text" id="passing" name="passing" required>
+      </div>
+      <div class="grid-second">
+        <label for="mark-no">Marksheet No:</label>
+        <input type="text" id="mark-no" name="mark-no" required>
+        <label for="scl-dist">School district:</label>
+        <input type="text" id="scl-district" name="scl-district" required>
+        <label for="percentage">SSLC percentage:</label>
+        <input type="text" id="percentage" name="percentage" required>
+      </div>
+    </div>
+    <h3>HSC</h3>
+    <div class="grid">
+      <div class="grid-first">
+        <label for="reg-no">Register NO:</label>
+        <input type="text" id="Reg-no" name="reg-no" required>
+        <label for="scl-name">School Name:</label>
+        <input type="text" id="scl-name" name="scl-name" required>
+        <label for="mark">HSC mark:</label>
+        <input type="text" id="mark" name="mark" required>
+        <label for="passing">Year of passing:</label>
+        <input type="text" id="passing" name="passing" required>
+      </div>
+      <div class="grid-second">
+        <label for="mark-no">Marksheet No:</label>
+        <input type="text" id="mark-no" name="mark-no" required>
+        <label for="scl-dist">School district:</label>
+        <input type="text" id="scl-district" name="scl-district" required>
+        <label for="percentage">HSC percentage:</label>
+        <input type="text" id="percentage" name="percentage" required>
+      </div>
+    </div>
+     <h3>College</h3>
+     Select the course:<select id="course" name="course" required>
+      <!-- <option value="">Select Repayment Period</option> -->
+      <option value="engineering">Engineering</option>
+      <option value="Arts & Science">Arts & Science</option>
+      <option value="Medical ">Medical course</option>
+      <option value="Agriculture ">Agriculture</option>
+    </select>
+     <div class="grid">
+      <div class="grid-first">
+        <label for="reg-no">Register no:</label>
+        <input type="text" id="Reg-no" name="reg-no" required>
+        <label for="college-name">College name:</label>
+        <input type="text" id="college-name" name="college-name" required>
+        <label for="percentage">Current semester:</label>
+        <input type="text" id="percentage" name="percentage" required>
+
+        <label for="passing">Year of passing:</label>
+        <input type="text" id="passing" name="passing" required>
+        <label for="pincode"> Pincode:</label>
+        <input type="text" id="pincode" name="pincode" required>
+
+      </div>
+      <div class="grid-second">
+        <label for="Department-name">Department name:</label>
+        <input type="text" id="Department-name" name="Department-name" required>
+        <label for="cgpa">Current CGPA:</label>
+        <input type="text" id="cgpa" name="cgpa" required>
+        <label for="c-year">Current year:</label>
+        <input type="text" id="c-year" name="c-year" required>
+        <label for="backlogs">Backlogs:</label>
+        <select id="backlogs" name="backlogs" required>
+          <!-- <option value="">Select Repayment Period</option> -->
+          <option value="NA">NA</option>
+          <option value="NSA">NSA</option>
+          <option value="NHA ">NHA</option>
+          <option value="SA ">SA</option>
+          <!-- <option value="Agriculture ">Agriculture</option> -->
+        </select>
+        <label for="college-dist">College district:</label>
+        <input type="text" id="college-district" name="college-district" required>
+      </div>
+    </div>
+    <label for="address">Address:</label>
+    <textarea id="address" name="address"></textarea>
+    <button>Previous</button>
+    <button (click)="accountInfo()">Next</button>
+  </form>
+</dialog>
+<dialog class="accountForms">
+  <form action="">
+    <h2>Account and Loan Details</h2>
+   <div class="grid">
+     <div class="grid-first">
+       <label for="bank-name">Bank name:</label>
+       <input type="text" id="bank-name" name="bank-name" required>
+       <label for="acc-no">Account no:</label>
+       <input type="text" id="bank-name" name="bank-name" required>
+       <label for="  MICR">MICR code:</label>
+       <input type="text" id="micr-code" name="micr-code" required>
+     </div>
+     <div class="grid-second">
+       <label for="branch">Branch name:</label>
+       <input type="text" id="branch-name" name="branch-name" required>
+       <label for="IFSC">IFSC code:</label>
+       <input type="text" id="ifsc-code" name="ifsc-code" required>
+     </div>
+   </div>
+   </form>
+</dialog>
+
+<!-- <app-footer></app-footer> -->

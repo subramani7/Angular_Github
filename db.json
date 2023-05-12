@@ -1,0 +1,99 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "admin": [
+    {
+      "username": "santhosh",
+      "password1": "Santy@007"
+    }
+  ],
+  "personalInfo": [
+    {
+      "firstname": "Santhosh",
+      "lastname": "P",
+      "dob": "2001-12-19",
+      "age": 22,
+      "fathername": "Palanisamy",
+      "mothername": "Vijayalaksmi",
+      "occupation": "weaving",
+      "ctc": 9999999999,
+      "sex": "Male",
+      "bloodgrp": "a+",
+      "Phoneno": "8610209535",
+      "address": "14/254,srini press 1st cross,chellakuttikaadu,salem-636015",
+      "id": 1
+    },
+    {
+      "firstname": "Harigokul",
+      "lastname": "S",
+      "dob": "2000-06-22",
+      "age": 22,
+      "fathername": "Srinivasan",
+      "mothername": "Padmavathi",
+      "occupation": "weaver",
+      "ctc": 9999999999,
+      "sex": "Male",
+      "bloodgrp": "o+",
+      "Phoneno": "9489922628",
+      "address": "NA",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "firstname": "vignesh",
+      "Phoneno": "9566506259",
+      "email": "vignesh@gmail.com",
+      "password": "Vignesh@123",
+      "confirm": "Vignesh@123",
+      "id": 1
+    },
+    {
+      "firstname": "vignesh",
+      "Phoneno": "8610209535",
+      "email": "vicky007@gmail.com",
+      "password": "Vicky@123",
+      "confirm": "Vicky@123",
+      "id": 2
+    },
+    {
+      "firstname": "Arun",
+      "Phoneno": "9597374379",
+      "email": "ajayarun348@gmail.com",
+      "password": "Arun@999",
+      "confirm": "Arun@999",
+      "id": 3
+    },
+    {
+      "firstname": "Harigokul",
+      "Phoneno": "9489922628",
+      "email": "harigokul476@gmail.com",
+      "password": "Hapo@1973",
+      "confirm": "Hapo@1973",
+      "id": 4
+    },
+    {
+      "firstname": "Aathmiga",
+      "Phoneno": "6380426608",
+      "email": "aathmiga@gmail.com",
+      "password": "Aathmiga@123",
+      "confirm": "Aathmiga@123",
+      "id": 5
+    }
+  ]
+}

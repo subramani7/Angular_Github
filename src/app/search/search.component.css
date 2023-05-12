@@ -1,0 +1,15 @@
+.search{
+  display: flex;
+  padding: 1%;
+  justify-content: end;
+  margin-right: 8%;
+}
+p{
+  padding-top: 2px;
+}
+input {
+  padding: 5px ;
+  border-radius: 8px;
+  border: 1px solid black;
+  outline: none;
+}

@@ -1,0 +1,49 @@
+<app-adminHeader></app-adminHeader>
+<app-search></app-search>
+
+
+<div class="grid">
+  <div class="gridFirst">
+    <app-adminNav></app-adminNav>
+  </div>
+  <div class="gridSecond">
+    <table>
+      <thead>
+        <tr>
+          <th>Reg no</th>
+          <th>First Name</th>
+          <th>Last name</th>
+          <th>Age</th>
+          <th>DOB</th>
+          <th>sex</th>
+          <th>Father name</th>
+          <th>Father occupation</th>
+          <th>Mother name</th>
+          <th>Mother occupation</th>
+          <th>Annual CTC</th>
+          <th>Blood group</th>
+          <th>Phone number</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let detail of details">
+          <td> {{detail.id}} </td>
+          <td> {{detail.firstname}} </td>
+          <td> {{detail.lastname}} </td>
+          <td> {{detail.age}} </td>
+          <td> {{detail.dob}} </td>
+          <td> {{detail.sex}} </td>
+          <td> {{detail.fathername}} </td>
+          <td> {{detail.occupation}} </td>
+          <td> {{detail.mothername}} </td>
+          <td> {{detail.occupation}} </td>
+          <td> {{detail.ctc}} </td>
+          <td> {{detail.bloodgrp}} </td>
+          <td> {{detail.Phoneno}}  </td>
+          <td> {{detail.address}} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<app-adminHeader></app-adminHeader>
+<app-search></app-search>
+
+<div class="grid">
+  <div class="gridFirst">
+    <app-adminNav></app-adminNav>
+  </div>
+
+<div class="gridSecond">
+  <table>
+    <thead>
+      <tr>
+        <th>Reg no</th>
+        <th>User Name</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let detail of details">
+        <td>{{detail.id}}</td>
+        <td>{{detail.firstname}}</td>
+        <td>{{detail.Phoneno}}</td>
+        <td> {{detail.email}}</td>
+        <td> {{detail.password}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
