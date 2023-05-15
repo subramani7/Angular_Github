@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent{
 
-  constructor(private fb:FormBuilder,private http:HttpClient,private route:Router) { }
+
+  constructor(private fb:FormBuilder,private http:HttpClient,private route:Router,private service:AuthService) { }
 
   loginform=this.fb.group({
     username:[,[Validators.required,Validators.pattern('^[a-zA-Z]+$')]],
@@ -42,6 +43,7 @@ export class LoginComponent{
     });
    }
   }
+  success=false;
   user()
   {
    this.http.get<any>('http://localhost:3000/users').subscribe((users)=>
@@ -51,6 +53,9 @@ export class LoginComponent{
      {
       alert('login successfully');
       this.loginform.reset();
+      this.success=true;
+      sessionStorage.setItem("success","true");
+      this.service.userlogin=true;
       this.route.navigate(['/home']);
      }
      else
@@ -59,6 +64,7 @@ export class LoginComponent{
      }
    });
   }
+
   // ngOnInit() {
   // }
 

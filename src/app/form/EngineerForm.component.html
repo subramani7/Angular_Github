@@ -1,6 +1,9 @@
 <app-header></app-header>
 <header>
-  <button (click)="personalInfo()">Personal details</button>
+  <h1>Welcome</h1><br>
+  <h2>Thanks for visiting our website</h2>
+  <h2>Intrested to get a loan...!</h2>
+  <button (click)="personalInfo()">Apply now</button>
 </header>
 <dialog class="personalDetails">
 
@@ -120,7 +123,10 @@
       <!-- <p class="error" *ngIf="personalForms.controls['address'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> Enter valid phone number</p> -->
   </div>
     <br>
-  <button [disabled]="!personalForms.valid" (click)="studyInfo()" >Next</button>
+    <div class="butt">
+      <button  [disabled]="!personalForms.valid" (click)="studyInfo()" >Next</button>
+    </div>
+
   </form>
 </dialog>
 <dialog class="studyForms">
@@ -213,8 +219,10 @@
     </div>
     <label for="address">Address:</label>
     <textarea id="address" name="address"></textarea>
-    <button>Previous</button>
-    <button (click)="accountInfo()">Next</button>
+    <div class="butt">
+      <button (click)="personalInfo()">Previous</button>
+      <button (click)="accountInfo()">Next</button>
+    </div>
   </form>
 </dialog>
 <dialog class="accountForms">
@@ -228,12 +236,16 @@
        <input type="text" id="bank-name" name="bank-name" required>
        <label for="  MICR">MICR code:</label>
        <input type="text" id="micr-code" name="micr-code" required>
+       <label for="amount">AMT reguired <span>*</span> (As per the fees structure)</label>
+       <input type="text" id="amount" name="amount" required>
      </div>
      <div class="grid-second">
        <label for="branch">Branch name:</label>
        <input type="text" id="branch-name" name="branch-name" required>
        <label for="IFSC">IFSC code:</label>
        <input type="text" id="ifsc-code" name="ifsc-code" required>
+       <label for="phone">Phone no:</label>
+       <input type="text" id="phone" name="phone"required>
      </div>
    </div>
    </form>

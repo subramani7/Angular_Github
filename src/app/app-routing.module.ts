@@ -17,6 +17,8 @@ import { RegisterComponent } from './Register/Register.component';
 import { ServiceComponent } from './service/service.component';
 import { StudyDetailsComponent } from './studyDetails/studyDetails.component';
 import { UsersComponent } from './users/users.component';
+import { AuthGuard } from './auth.guard';
+import { AccountComponent } from './account/account.component';
 // import { StudyDetailsFormComponent } from './form/studyDetailsForm/studyDetailsForm.component';
 
 const routes: Routes = [
@@ -31,6 +33,7 @@ const routes: Routes = [
   {
     path:'service',
     component:ServiceComponent,
+    canActivate:[AuthGuard],
   },
 
   {
@@ -48,18 +51,22 @@ const routes: Routes = [
   {
     path:'service/engineer',
     component:EngineeringServiceComponent,
+    canActivate:[AuthGuard],
   },
   {
     path:'service/arts',
     component:ArtsServiceComponent,
+    canActivate:[AuthGuard],
   },
   {
     path:'service/medical',
     component:MedicalServiceComponent,
+    canActivate:[AuthGuard],
   },
   {
     path:'service/agri',
     component:AgricultureServiceComponent,
+    canActivate:[AuthGuard],
   },
   {
     path:'service/engineer/Eform',
@@ -89,6 +96,11 @@ const routes: Routes = [
     path:'loan',
     component:LoanDetailsComponent,
   },
+  {
+    path:'myaccount',
+    component:AccountComponent,
+  }
+
 
 
 

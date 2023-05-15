@@ -9,21 +9,6 @@ import { ValidateService } from '../validate.service';
   styleUrls: ['./EngineerForm.component.css']
 })
 export class EngineerFormComponent implements OnInit {
-//  personalForm= new FormGroup({
-//      firstname: new FormControl(),
-//      lastname: new FormControl(),
-//      dob: new FormControl(),
-//      age: new FormControl(),
-//      fathername: new FormControl(),
-//      occupation: new FormControl(),
-//      mothername: new FormControl(),
-//      ctc: new FormControl(),
-//      sex: new FormControl(),
-//      bloodgrp: new FormControl(),
-//      Phoneno: new FormControl(),
-//      address: new FormControl()
-//  })
-
  constructor(
 
   private fb: FormBuilder,
@@ -44,7 +29,7 @@ personalForms = this.fb.group(
     bloodgrp:[, [Validators.required,]],
     Phoneno:[, [Validators.required,Validators.pattern('^[6-9]{1}[0-9]{9}$')]],
     address:[, [Validators.required,]],
-
+    
 }
 );
 personalSubmit() {

@@ -4,12 +4,13 @@ header{
   margin-bottom: 1%;
 }
 header button{
-  background-color: #ffffff;
-  padding: 1% 6%  1% 6%;
+  background-color: #afa5a5;
+  padding: 1% 2%  1% 2%;
   border: none;
+  border-radius: 15px;
   font-size: 15px;
   font-weight: bolder;
-  border-bottom: 2px solid rgb(63, 179, 190);
+  /* border-bottom: 2px solid rgb(63, 179, 190);p+ */
 
 }
 header button:hover{
@@ -119,15 +120,14 @@ input[type="date"],select
   /* padding-bottom: 3%; */
 }
 .personalDetails{
-  margin-top: 8%;
+  margin-top: 9%;
   margin-left: 10%;
   /* overflow-x: auto; */
   border: none;
   /* display: flex; */
   width: 80%;
-  height: 100%;
-  /* padding-top: 3%; */
-  padding-bottom: 5%;
+  height: 150%;
+  padding-bottom: 9%;
   justify-content: center;
 }
 .personalDetails::backdrop{
@@ -135,12 +135,12 @@ input[type="date"],select
   opacity: 0.5;
 }
 .accountForms{
-  margin-top: 8%;
+  margin-top: 9%;
   margin-left: 10%;
   border: none;
   /* display: flex; */
   width: 80%;
-  height: 200%;
+  height: 300%;
   /* padding: 5%; */
   justify-content: center;
 }
@@ -149,16 +149,34 @@ input[type="date"],select
   opacity: 0.5;
 }
 .studyForms{
-  margin-top: 8%;
+  margin-top: 9%;
   margin-left: 10%;
   border: none;
   /* display: flex; */
   width: 80%;
-  height:200%;
+  height:300%;
   /* padding: 5%; */
+  padding-bottom: 9%;
   justify-content: center;
 }
 .studyForms::backdrop{
   background-color: white;
   opacity: 0.5;
+}
+.butt{
+  display: flex;
+  justify-content: center;
+
+}
+.butt button
+{
+  padding: 1% 5% 1% 5%;
+  border-radius: 15px;
+  border: none;
+  font-weight: bolder;
+  outline: 0;
+  background-color:rgb(162, 202, 202);
+}
+.butt button:hover{
+  background-color: aliceblue;
 }

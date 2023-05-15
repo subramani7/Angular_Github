@@ -28,12 +28,13 @@ import { PersonalDetailsComponent } from './personalDetails/personalDetails.comp
 import { StudyDetailsComponent } from './studyDetails/studyDetails.component';
 import { AccountDetailsComponent } from './accountDetails/accountDetails.component';
 import { LoanDetailsComponent } from './loanDetails/loanDetails.component';
+import { AccountComponent } from './account/account.component';
 
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
       HomeComponent,
       // AboutComponent,
@@ -56,7 +57,8 @@ import { LoanDetailsComponent } from './loanDetails/loanDetails.component';
       PersonalDetailsComponent,
       StudyDetailsComponent,
       AccountDetailsComponent,
-      LoanDetailsComponent
+      LoanDetailsComponent,
+      AccountComponent
    ],
   imports: [
     BrowserModule,
