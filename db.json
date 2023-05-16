@@ -84,15 +84,14 @@
       "id": 4
     }
   ],
-
   "users": [
     {
-      "firstname": "arun",
+      "firstname": "santhosh",
       "Phoneno": "8610209535",
       "email": "crazysanty007@gmail.com",
       "password": "Mani@123",
       "confirm": "Mani@123",
-      "address": "ksr college of engineering",
+      "address": "14/254.srini press 1st cross ,chellakuttykaadu,salem-636015",
       "id": 1
     }
   ]

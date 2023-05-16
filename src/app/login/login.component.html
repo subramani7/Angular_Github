@@ -25,7 +25,7 @@
       <div class="errorContainer" *ngIf="loginform.controls['password'].dirty">
         <p class="error" *ngIf="loginform.controls['password'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>password can't be blank</p>
         <!-- <p class="error" *ngIf="loginform.controls['password'].errors?.['minlength']"><i class="fas fa-exclamation-circle"></i>Password should contain 8 characters</p> -->
-        <p class="error" *ngIf="loginform.controls['password'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Enter valid password like contain(A-a-1-@)</p>
+        <p class="error" *ngIf="loginform.controls['password'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Enter valid password</p>
       </div>
       <br>
       <div class="forget">

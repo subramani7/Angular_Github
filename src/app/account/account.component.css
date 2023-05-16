@@ -1,17 +1,100 @@
 .grid{
   display: grid;
   grid-template-columns: 40% 60%;
+  /* margin-top: 3%; */
 }
-.firstGrid
+/* h1
 {
-  height: 100%;
-  border: 1px solid black;
+  text-align: center;
+} */
+.gridFirst{
+  padding-left: 15%;
+  padding-right: 15%;
+  border-right: 2px solid rgb(127, 124, 124);
+  border-left: 3px solid rgb(127, 124, 124);
+  /* margin-left: 5%; */
+  border-radius: 15px;
 }
-input{
+.gridFirst h1{
+  margin-left: 35%;
+}
+.details{
+  margin-top: 4%;
+}
+.details label{
+  font-size: 15px;
+  font-weight: bolder;
+}
+.details p{
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin-top: 3%;
+  border-bottom: 1px solid black;
+  background-color: rgb(152, 208, 243);
+  border-radius: 10px;
+  text-align: center
+}
+.details p:hover{
+  background-color: aliceblue;
+}
+button{
+  margin-left: 35%;
+  margin-top: 5%;
+  padding: 2% 5% 2% 5% ;
+  font-weight: bolder;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 15px;
+}
+.gridSecond{
+  /* margin-left:1%; */
+  border-left: 2px solid rgb(127, 124, 124);
+  border-radius: 15px;
+}
+.gridSecond h1{
+  text-align: center;
+}
+.gridSecond p
+{
+  margin-top: 2%;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+.update{
+  margin-left: 35%;
+  margin-top: 10%;
+  padding: 3%;
+  border: none;
+  border-radius: 20px;
+  box-shadow:  2px 3px 62px -12px rgba(0,0,0,0.75);
+  background-color: azure;
 
-  border:none;
-  outline: 0;
+}
+.update::backdrop{
+  background-color: white;
+  opacity: 0.6;
+}
+.update button{
+  margin-left: 5%;
+}
+.butt{
+  margin-left: 27%;
+  display: flex;
+}
+.update button:hover{
+  background-color: rgb(143, 199, 247);
+}
+.update h1{
+  text-align: center;
 }
 .form{
-  display: flex;
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: 30% 65%;
+
+}
+.form label{
+  text-align: end;
+  margin-right: 13%;
 }

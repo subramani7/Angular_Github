@@ -1,6 +1,42 @@
 <app-header></app-header>
 <div class="grid">
-  <div class="firstGrid">
+  <div class="gridFirst">
+    <h1>Profile</h1>
+    <div class="details">
+      <label for="firstname">Name:</label>
+      <p>{{firstname}}</p>
+    </div>
+    <div class="details">
+      <label for="email">EmailId:</label>
+      <p>{{email}}</p>
+    </div>
+    <div class="details">
+      <label for="phoneno">Phoneno:</label>
+      <p>{{phoneno}}</p>
+    </div>
+    <div class="details">
+      <label for="password">Password:</label>
+      <p>{{password}}</p>
+    </div>
+    <div class="details">
+      <label for="address">Address:</label>
+      <p>{{address}}</p>
+    </div>
+<button (click)="profileUpdate()">Update profile</button>
+  </div>
+  <div class="gridSecond">
+    <h1>loan Status</h1>
+    <p>Your loan request under checking in our bank side...</p>
+    <p>Your loan status will be updated with in 72 hours...</p>
+    <p>Please wait...</p>
+  </div>
+</div>
+
+
+
+
+
+<dialog class="update">
     <h1>Profile</h1>
     <form action="" [formGroup]="update">
       <div class="form">
@@ -8,7 +44,7 @@
         <input type="text" formControlName="firstname" [name]="firstname" >
       </div>
      <div class="form">
-      <label for="email">EmailId</label>
+      <label for="email">EmailId:</label>
       <input type="text" formControlName="email" [name]="email">
      </div>
      <div class="form">
@@ -16,20 +52,25 @@
       <input type="text" formControlName="phoneno" [name]="phoneno">
      </div>
 <div class="form">
-  <label for="password">Password</label>
+  <label for="password">Password:</label>
   <input type="text" formControlName="password" [name]="password">
 </div>
 <div class="form">
+  <label for="password">Re-enter Password:</label>
+  <input type="text" formControlName="confirm" [name]="confirm">
+</div>
+<div class="form">
   <label for="address">Address:</label>
-  <input type="text" formControlName="address" [name]="address">
+  <textarea formControlName="address" [name]="address" id="" cols="30" rows="3"></textarea>
+  <!-- <textarea type="text" formControlName="address" [name]="address"> -->
 </div>
 
     </form>
-    <button (click)="updateProfile(update.value)">update</button>
+    <div class="butt">
+      <button (click)="updateProfile(update.value)">Update</button>
+      <button (click)="closeProfile()">back</button>
+    </div>
+
 <!-- </div> -->
 
-  </div>
-  <div class="secondGrid">
-
-  </div>
-</div>
+</dialog>
