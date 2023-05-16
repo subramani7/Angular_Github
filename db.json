@@ -84,81 +84,16 @@
       "id": 4
     }
   ],
+
   "users": [
     {
-      "firstname": "vignesh",
-      "Phoneno": "9566506259",
-      "email": "vignesh@gmail.com",
-      "password": "Vignesh@123",
-      "confirm": "Vignesh@123",
-      "id": 1
-    },
-    {
-      "firstname": "vignesh",
-      "Phoneno": "8610209535",
-      "email": "vicky007@gmail.com",
-      "password": "Vicky@123",
-      "confirm": "Vicky@123",
-      "id": 2
-    },
-    {
-      "firstname": "Arun",
-      "Phoneno": "9597374379",
-      "email": "ajayarun348@gmail.com",
-      "password": "Arun@999",
-      "confirm": "Arun@999",
-      "id": 3
-    },
-    {
-      "firstname": "Harigokul",
-      "Phoneno": "9489922628",
-      "email": "harigokul476@gmail.com",
-      "password": "Hapo@1973",
-      "confirm": "Hapo@1973",
-      "id": 4
-    },
-    {
-      "firstname": "Aathmiga",
-      "Phoneno": "6380426608",
-      "email": "aathmiga@gmail.com",
-      "password": "Aathmiga@123",
-      "confirm": "Aathmiga@123",
-      "id": 5
-    },
-    {
-      "firstname": "gokulraja",
-      "Phoneno": "9659245977",
-      "email": "gokulrajalp@gmail.com",
-      "password": "Gokul@123",
-      "confirm": "Gokul@123",
-      "id": 6
-    },
-    {
-      "firstname": "naruto",
-      "Phoneno": "9945562366",
-      "email": "naruto@gmail.com",
-      "password": "Naruto@123",
-      "confirm": "Naruto@123",
-      "id": 7
-    },
-    {
-      "firstname": "mani",
-      "Phoneno": "9945562366",
-      "email": "hari007@gmail.com",
-      "password": "Hari@123",
-      "confirm": "Hari@123",
-      "address": "hvuvuj",
-      "image": "C:\\fakepath\\d668839b939f18db97ebb350cba1be57.jpg",
-      "id": 8
-    },
-    {
-      "firstname": "mani",
+      "firstname": "arun",
       "Phoneno": "8610209535",
       "email": "crazysanty007@gmail.com",
       "password": "Mani@123",
       "confirm": "Mani@123",
       "address": "ksr college of engineering",
-      "id": 9
+      "id": 1
     }
   ]
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidateService } from '../validate.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-account',
@@ -7,21 +9,18 @@ import { ValidateService } from '../validate.service';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
-  profileImagePath: string = '../assets/images/click.png';
-
-  onFileSelected(event: any) {
-    const file: File = event.target.files[0];
-    const reader = new FileReader();
-
-    reader.onload = (e: any) => {
-      this.profileImagePath = e.target.result;
-    };
-
-    reader.readAsDataURL(file);
-  }
+    update:FormGroup
 
    name:any=sessionStorage.getItem('firstname');
-  constructor(private service:ValidateService) { }
+  constructor(private service:ValidateService,private form:FormBuilder,private http:HttpClient) {
+    this.update=this.form.group({
+      firstname:[,Validators.required],
+      phoneno:[,Validators.required],
+      email:[,Validators.required],
+      password:[,Validators.required],
+    address:[,Validators.required],
+    })
+  }
   registerDetails:any='';
   idvalue:any;
   firstname:any;
@@ -38,6 +37,7 @@ export class AccountComponent implements OnInit {
          console.log(this.name);
          this.idvalue=i;
          console.log(this.idvalue);
+
       }
      }
      this.firstname=this.registerDetails[this.idvalue].firstname;
@@ -45,8 +45,44 @@ export class AccountComponent implements OnInit {
      this.phoneno=this.registerDetails[this.idvalue].Phoneno;
      this.password=this.registerDetails[this.idvalue].password;
      this.address=this.registerDetails[this.idvalue].address;
+     this.idvalue++;
+     this.update.controls['firstname'].setValue(this.firstname);
+     this.update.controls['email'].setValue(this.email);
+     this.update.controls['phoneno'].setValue(this.phoneno);
+     this.update.controls['password'].setValue(this.password);
+     this.update.controls['address'].setValue(this.address);
+     this.update.markAsPristine();
     }
     )
+
+  }
+  updateProfile(data:any){
+    alert(this.idvalue);
+   if(!this.update.pristine){
+    let updatedData={
+      firstname: data.firstname,
+      Phoneno: data.phoneno ,
+      email:  data.email,
+      password: data.password,
+      address: data.address,
+    }
+    this.service.updateuserInfo(updatedData,this.idvalue).subscribe((Response)=>
+    {
+      alert("updated successfull");
+    })
+
+   }
+   else{
+    alert("Data is not modified");
+   }
+
   }
 
 }
+// "firstname": "mani",
+//       "Phoneno": "8610209535",
+//       "email": "crazysanty007@gmail.com",
+//       "password": "Mani@123",
+//       "confirm": "Mani@123",
+//       "address": "ksr college of engineering",
+//       "id": 9

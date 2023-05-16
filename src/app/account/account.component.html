@@ -1,17 +1,35 @@
 <app-header></app-header>
-<h1>Profile</h1>
-<div class="profile">
-  <img class="profile-image" [src]="profileImagePath" alt="Profile Image">
-  <input type="file" accept="image/*" (change)="onFileSelected($event)">
-  <label for="upload-btn">Choose Photo</label>
+<div class="grid">
+  <div class="firstGrid">
+    <h1>Profile</h1>
+    <form action="" [formGroup]="update">
+      <div class="form">
+        <label for="firstname">Name:</label>
+        <input type="text" formControlName="firstname" [name]="firstname" >
+      </div>
+     <div class="form">
+      <label for="email">EmailId</label>
+      <input type="text" formControlName="email" [name]="email">
+     </div>
+     <div class="form">
+      <label for="phoneno">Phoneno:</label>
+      <input type="text" formControlName="phoneno" [name]="phoneno">
+     </div>
+<div class="form">
+  <label for="password">Password</label>
+  <input type="text" formControlName="password" [name]="password">
+</div>
+<div class="form">
+  <label for="address">Address:</label>
+  <input type="text" formControlName="address" [name]="address">
 </div>
 
-
-<!-- <h2>{{name}}</h2> -->
-<!-- <div class="detail" *ngFor="let register of registerDetails"> -->
-  <h1>{{firstname}}</h1>
-  <h1>{{phoneno}}</h1>
-  <h1>{{email}}</h1>
-   <h1>{{password}}</h1>
-    <h1>{{address}}</h1>
+    </form>
+    <button (click)="updateProfile(update.value)">update</button>
 <!-- </div> -->
+
+  </div>
+  <div class="secondGrid">
+
+  </div>
+</div>

@@ -1,29 +1,17 @@
-.profile {
-  text-align: center;
+.grid{
+  display: grid;
+  grid-template-columns: 40% 60%;
 }
-
-.profile-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-  cursor: pointer;
+.firstGrid
+{
+  height: 100%;
+  border: 1px solid black;
 }
+input{
 
-input[type="file"] {
-  display: none;
+  border:none;
+  outline: 0;
 }
-
-label {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-label:hover {
-  background-color: #0056b3;
+.form{
+  display: flex;
 }
