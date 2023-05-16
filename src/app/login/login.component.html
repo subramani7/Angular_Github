@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="loginDiv">
   <div class="loginmodel">
-    <form [formGroup]="loginform" (submit)="loginForm()">
+    <form [formGroup]="loginform" (submit)="loginForm(username.value)">
       <div class="head-content">
         <img
           src="../assets/Images/userlogo2.png"
@@ -12,7 +12,7 @@
       </div>
       <div class="loginusername">
         <i class="fa fa-user" aria-hidden="true"></i>
-        <input type="text" placeholder="Username" id="username" formControlName="username" name="username" />
+        <input type="text" placeholder="Username" id="username" formControlName="username" name="username" #username />
       </div>
       <div class="errorContainer" *ngIf="loginform.controls['username'].dirty">
         <p class="error" *ngIf="loginform.controls['username'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>First Name can't be blank</p>

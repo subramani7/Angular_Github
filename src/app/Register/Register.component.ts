@@ -26,6 +26,8 @@ export class RegisterComponent {
     email: new FormControl(),
     password: new FormControl(),
     confirm: new FormControl(),
+    address:new FormControl(),
+    image:new FormControl(),
   });
 
   constructor(
@@ -43,6 +45,8 @@ export class RegisterComponent {
       password: [, [Validators.required,Validators.pattern('^[A-Z]{1}[a-z]+[@/!/#/$/%/&][0-9]{2,4}$')]],
       confirm: [, [Validators.required,]],
       // policy:[,[Validators.required]],
+      address: [,[Validators.required]],
+  
     },
     { validator: ConfirmedValidator('password', 'confirm') }
   );

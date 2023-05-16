@@ -1,2 +1,17 @@
 <app-header></app-header>
 <h1>Profile</h1>
+<div class="profile">
+  <img class="profile-image" [src]="profileImagePath" alt="Profile Image">
+  <input type="file" accept="image/*" (change)="onFileSelected($event)">
+  <label for="upload-btn">Choose Photo</label>
+</div>
+
+
+<!-- <h2>{{name}}</h2> -->
+<!-- <div class="detail" *ngFor="let register of registerDetails"> -->
+  <h1>{{firstname}}</h1>
+  <h1>{{phoneno}}</h1>
+  <h1>{{email}}</h1>
+   <h1>{{password}}</h1>
+    <h1>{{address}}</h1>
+<!-- </div> -->

@@ -50,11 +50,17 @@
                         <p class="error" *ngIf="RegisterForms.controls['confirm'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>confirm password can't be blank</p>
                        <p class="error" *ngIf="RegisterForms.controls['confirm'].errors?.['confirmedValidator']">Password doesn't match</p>
                       </div>
+                <br>
+                        <div class="address">
+                          <p >Address:</p>
+                          <textarea name="address" formControlName="address" id="address" cols="26" rows="4" ></textarea>
+                        </div>
 
-                      <div class="Registerusername">
-                      <p>Add photo:</p>
-                        <input type="image" formControlName="image" name="image"  id="image"  required/>
-                      </div>
+
+
+
+
+
 
      <p><button class="registerconfirm" [disabled]="!RegisterForms.valid">Register</button></p>
         <p style=" font-size: 12px; cursor: pointer; text-align: center; margin-top: 5%; font-family: 'Times New Roman', Times, serif;" (click)="gologin()" >Already have an account..? <span style="color: red;">Go to login</span> </p>

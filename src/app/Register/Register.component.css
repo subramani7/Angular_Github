@@ -75,3 +75,14 @@ button:hover{
   /* padding-bottom: 3%; */
 }
 
+.photo{
+  margin-top: 3%;
+  display: flex;
+}
+textarea{
+  outline: 0;
+  padding-left: 3%;
+}
+p{
+  color: rgb(89, 90, 91);
+}

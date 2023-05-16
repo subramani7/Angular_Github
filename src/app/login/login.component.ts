@@ -18,7 +18,9 @@ export class LoginComponent{
     password:[,[Validators.required,Validators.pattern('^[A-Z]{1}[a-z]+[@/!/#/$/%/&][0-9]{2,4}$')]]
   })
   error:boolean=false;
-  loginForm(){
+  loginForm(username:any){
+    console.log(username);
+    sessionStorage.setItem('firstname',username);
     this.user();
     this.admin();
     if(this.error){
@@ -54,7 +56,10 @@ export class LoginComponent{
       alert('login successfully');
       this.loginform.reset();
       this.success=true;
+      // sessionStorage.setItem("firstname",)
+      // console.log();
       sessionStorage.setItem("success","true");
+
       this.service.userlogin=true;
       this.route.navigate(['/home']);
      }
