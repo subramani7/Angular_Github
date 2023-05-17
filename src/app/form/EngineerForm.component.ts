@@ -29,7 +29,7 @@ personalForms = this.fb.group(
     bloodgrp:[, [Validators.required,]],
     Phoneno:[, [Validators.required,Validators.pattern('^[6-9]{1}[0-9]{9}$')]],
     address:[, [Validators.required,]],
-    
+
 }
 );
 personalSubmit() {
@@ -54,5 +54,9 @@ personalSubmit() {
 accountInfo(){
  const account:any= document.querySelector(".accountForms");
  account.showModal();
+}
+backPage()
+{
+   this.route.navigate(['/service']);
 }
 }

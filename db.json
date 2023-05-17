@@ -86,13 +86,22 @@
   ],
   "users": [
     {
-      "firstname": "santhosh",
+      "firstname": "mani",
       "Phoneno": "8610209535",
       "email": "crazysanty007@gmail.com",
       "password": "Mani@123",
       "confirm": "Mani@123",
       "address": "14/254.srini press 1st cross ,chellakuttykaadu,salem-636015",
       "id": 1
+    },
+    {
+      "firstname": "Shivaraja",
+      "Phoneno": "7904029565",
+      "email": "shivarajamurugan2000@gmail.com",
+      "password": "Siva@2000",
+      "confirm": "Siva@2000",
+      "address": "352/612,kandhappa colony,annathanapatty,salem-636002",
+      "id": 2
     }
   ]
 }

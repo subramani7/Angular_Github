@@ -5,7 +5,7 @@
   <h2>Intrested to get a loan...!</h2>
   <button (click)="personalInfo()">Apply now</button>
 </header>
-<dialog class="personalDetails">
+<div class="personalDetails">
 
   <form [formGroup]="personalForms" (ngSubmit)="personalSubmit()">
     <h2>Education Loan Application form</h2>
@@ -124,12 +124,13 @@
   </div>
     <br>
     <div class="butt">
+      <button (click)="backPage()">back</button>
       <button  [disabled]="!personalForms.valid" (click)="studyInfo()" >Next</button>
     </div>
 
   </form>
-</dialog>
-<dialog class="studyForms">
+</div>
+<div class="studyForms">
   <form action="">
     <h2>Study details</h2>
     <h3>SSLC</h3>
@@ -224,8 +225,8 @@
       <button (click)="accountInfo()">Next</button>
     </div>
   </form>
-</dialog>
-<dialog class="accountForms">
+</div>
+<div class="accountForms">
   <form action="">
     <h2>Account and Loan Details</h2>
    <div class="grid">
@@ -248,7 +249,58 @@
        <input type="text" id="phone" name="phone"required>
      </div>
    </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" name="" id="">
+    <p>Eligibility Criteria: Lenders may have specific eligibility requirements regarding the borrower's age, citizenship, educational institution, course of study, academic performance, and co-applicant requirements.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" name="" id="">
+    <p>Loan Amount: The maximum loan amount that can be availed is usually determined based on the cost of education, including tuition fees, living expenses, books, and other educational-related expenses. There may be a cap on the loan amount.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" name="" id="">
+    <p>Repayment Period: The repayment period is the duration within which the borrower is expected to repay the loan. It can range from several years to a couple of decades, depending on the terms of the loan and the lender's policies.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" name="" id="">
+    <p>Interest Rate: Education loans typically have an interest rate, which can be fixed or variable. The interest rate can depend on factors such as the borrower's credit history, loan amount, and repayment period.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" name="" id="">
+    <p>Repayment Options: Lenders may provide various repayment options, including monthly installments, deferred repayment, and income-based repayment plans. Each option may have its own terms and conditions.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" name="" id="">
+    <p>Prepayment and Penalty Charges: Education loans may have provisions for prepayment of the loan amount before the designated repayment period. Lenders may also impose penalties or charges for late payments or defaults.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox"  class="checkbox" name="" id="">
+    <p>Documentation: Borrowers are typically required to provide supporting documents, such as proof of identity, address, educational institution admission letter, fee structure, academic records, and income-related documents.</p>
+   </div>
+   <div class="butt">
+    <button>Previous</button>
+    <button>Next</button>
+   </div>
+
    </form>
-</dialog>
+</div>
+<div class="documents">
+  <h1>Documents</h1>
+  <p>Birth certificate PDF:</p>
+  <input type="file" name="" id="">
+  <p>Aadhar card PDF:</p>
+  <input type="file" name="" id="">
+  <p>PAN card PDF:</p>
+  <input type="file" name="" id="">
+  <p>Income certificate PDF:</p>
+  <input type="file" name="" id="">
+  <p>Native sertificate PDF:</p>
+  <input type="file" name="" id="">
+  <p></p>
+  <input type="file" name="" id="">
+  <p></p>
+  <input type="file" name="" id="">
+
+</div>
 
 <!-- <app-footer></app-footer> -->

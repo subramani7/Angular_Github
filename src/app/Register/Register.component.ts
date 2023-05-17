@@ -43,8 +43,8 @@ export class RegisterComponent {
       // mobilenumber:[,[Validators.required,Validators.pattern("^[6-9]{1}[0-9]{9}$")]],
       email: [,[Validators.required, Validators.pattern('^([a-zA-Z0-9.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})$')]],
       password: [, [Validators.required,Validators.pattern('^[A-Z]{1}[a-z]+[@/!/#/$/%/&][0-9]{2,4}$')]],
-      // confirm: [, [Validators.required,]],
-      policy:[,[Validators.required]],
+      confirm: [, [Validators.required,]],
+      // policy:[,[Validators.required]],
       address: [,[Validators.required]],
 
     },

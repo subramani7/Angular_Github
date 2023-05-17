@@ -40,7 +40,6 @@ export class AccountComponent implements OnInit {
          console.log(this.name);
          this.idvalue=i;
          console.log(this.idvalue);
-
       }
      }
      this.firstname=this.registerDetails[this.idvalue].firstname;
@@ -77,14 +76,14 @@ export class AccountComponent implements OnInit {
     this.service.updateuserInfo(updatedData,this.idvalue).subscribe((Response)=>
     {
       alert("updated successfull");
-      // this.http.get(`http://localhost:3000/users/${this.idvalue}`).subscribe((Response)=>{
+      // this.http.get(`http://localhost:3000/users/${this.idvalue}`).subscribe((Response:any)=>{
       //   console.log(Response.firstname);
-      //   // this.update.controls['firstname'].setValue(Response[0].firstname);
-      //   // this.update.controls['email'].setValue(Response.email);
-      //   // this.update.controls['phoneno'].setValue(Response.phoneno);
-      //   // this.update.controls['password'].setValue(Response.password);
-      //   // // this.update.controls['confirm'].setValue(Response.confirm);
-      //   // this.update.controls['address'].setValue(Response.address);
+      //   this.update.controls['firstname'].setValue(Response.firstname);
+      //   this.update.controls['email'].setValue(Response.email);
+      //   this.update.controls['phoneno'].setValue(Response.phoneno);
+      //   this.update.controls['password'].setValue(Response.password);
+      //   // this.update.controls['confirm'].setValue(Response.confirm);
+      //   this.update.controls['address'].setValue(Response.address);
       // }
       // )
       this.route.navigate(['/login']);
