@@ -36,7 +36,7 @@ export class LoginComponent{
       {
        alert('login successfully');
        this.loginform.reset();
-       this.route.navigate(['/users']);
+       this.route.navigate(['/admin']);
       }
       else
       {

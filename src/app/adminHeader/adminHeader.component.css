@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 80% 20%;
   padding: 2%;
-  background-color: rgb(200, 243, 243);
+  background-color: rgb(51, 147, 237);
  }
 
  .returnHome button{
