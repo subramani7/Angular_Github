@@ -15,6 +15,9 @@ export class ValidateService
   addPersonalInfo(data:any){
     return this.client.post("http://localhost:3000/personalInfo",data);
   }
+  addAccountInfo(data:any){
+   return this.client.post("http://localhost:3000/account",data);
+  }
 getData(): Observable <any>{
  return this.client.get("http://localhost:3000/users");
 }

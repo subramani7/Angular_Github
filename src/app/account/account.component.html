@@ -1,36 +1,42 @@
 <app-header></app-header>
 <div class="grid">
   <div class="gridFirst">
-    <h1>Profile</h1>
-    <div class="details">
-      <label for="firstname">Name:</label>
-      <p>{{firstname}}</p>
-    </div>
-    <div class="details">
-      <label for="email">EmailId:</label>
-      <p>{{email}}</p>
-    </div>
-    <div class="details">
-      <label for="phoneno">Phoneno:</label>
-      <p>{{phoneno}}</p>
-    </div>
-    <div class="details">
-      <label for="password">Password:</label>
-      <p>{{password}}</p>
-    </div>
-    <div class="details">
-      <label for="address">Address:</label>
-      <p>{{address}}</p>
-    </div>
-<button (click)="profileUpdate()">Update profile</button>
+   <h1>Account</h1>
+   <span> Do not have an account...?  <a (click)="bankaccount()" style="cursor: pointer;">Click here</a> </span>
+   <p>{{val|json}}</p>
   </div>
   <div class="gridSecond">
-    <h1>loan Status</h1>
-    <p>Your loan request under checking in our bank side...</p>
-    <p>Your loan status will be updated with in 72 hours...</p>
-    <p>Please wait...</p>
+
+   <div class="profile">
+    <img src="..\assets\Images\User-Profile-PNG-High-Quality-Image.png" alt="" width="80px" height="80px">
+    <button (click)="profileUpdate()">Update profile</button>
+   </div>
+   <div class="profileDetails">
+    <div class="details">
+      <p style="font-size: 23px;font-weight: bolder;color: blue; margin-bottom: 3%;">{{firstname}}</p>
+    </div>
+    <div class="details">
+      <i class="fa-solid fa-envelope"></i>
+      <p>&nbsp;&nbsp;&nbsp;{{email}}</p>
+    </div>
+    <div class="details">
+      <i class="fa-solid fa-phone-volume"></i>
+      <p>&nbsp;&nbsp;&nbsp;{{phoneno}}</p>
+    </div>
+    <div class="details">
+      <i class="fa-solid fa-key"></i>
+      <p>&nbsp;&nbsp;&nbsp;{{password}}</p>
+    </div>
+    <div class="details">
+      <i class="fa-solid fa-location-dot"></i>
+      <p>&nbsp;&nbsp;&nbsp;{{address}}</p>
+    </div>
+   </div>
+
+
   </div>
 </div>
+
 <dialog class="update">
     <h1>Profile</h1>
     <form action="" [formGroup]="update">
@@ -67,5 +73,50 @@
     </div>
 
 <!-- </div> -->
-
 </dialog>
+<div class="loanStatus">
+  <h1>loan Status</h1>
+  <p>Your loan request under checking in our bank side...</p>
+  <p>Your loan status will be updated with in 72 hours...</p>
+  <p>Please wait...</p>
+
+</div>
+
+ <dialog class="account">
+ <h1>Create Account</h1>
+ <form action=""(ngSubmit)="accountSubmit()" [formGroup]="Account">
+  <div class="form" >
+    <label for="Name">Name:</label>
+    <input type="text" formControlName="name"  >
+  </div>
+  <div class="form">
+    <label for="Pname">Parent name:</label>
+    <input type="text"  formControlName="Pname"  >
+  </div>
+  <div class="form">
+    <label for="phone"> PhoneNo:</label>
+    <input type="text" formControlName="phone" >
+  </div>
+  <div class="form">
+    <label for="email">EmailID:</label>
+    <input type="email" formControlName="email" >
+  </div>
+  <div class="form">
+    <label for="pan">PAN no:</label>
+    <input type="text" formControlName="pan">
+  </div>
+  <div class="form">
+    <label for="aadhar">Aadhar no:</label>
+    <input type="text" formControlName="aadhar">
+  </div>
+  <br>
+
+
+   <button  [disabled]="!Account.valid">Create</button>
+
+ </form>
+<div class="back">
+  <button  class="button" (click)="closeAccount()">back</button>
+</div>
+
+  </dialog>

@@ -22,73 +22,11 @@
       "password1": "Santy@007"
     }
   ],
-  "personalInfo": [
-    {
-      "firstname": "Santhosh",
-      "lastname": "P",
-      "dob": "2001-12-19",
-      "age": 22,
-      "fathername": "Palanisamy",
-      "mothername": "Vijayalaksmi",
-      "occupation": "weaving",
-      "ctc": 9999999999,
-      "sex": "Male",
-      "bloodgrp": "a+",
-      "Phoneno": "8610209535",
-      "address": "14/254,srini press 1st cross,chellakuttikaadu,salem-636015",
-      "id": 1
-    },
-    {
-      "firstname": "Harigokul",
-      "lastname": "S",
-      "dob": "2000-06-22",
-      "age": 22,
-      "fathername": "Srinivasan",
-      "mothername": "Padmavathi",
-      "occupation": "weaver",
-      "ctc": 9999999999,
-      "sex": "Male",
-      "bloodgrp": "o+",
-      "Phoneno": "9489922628",
-      "address": "NA",
-      "id": 2
-    },
-    {
-      "firstname": "mani",
-      "lastname": "D",
-      "dob": "1999-06-19",
-      "age": 23,
-      "fathername": "Palanisamy",
-      "mothername": "Vijayalaksmi",
-      "occupation": "weaver",
-      "ctc": 8610209535,
-      "sex": "Male",
-      "bloodgrp": "o-",
-      "Phoneno": "8925498970",
-      "address": "NA",
-      "id": 3
-    },
-    {
-      "firstname": "Arun",
-      "lastname": "A",
-      "dob": "2003-02-15",
-      "age": 20,
-      "fathername": "Saravanan",
-      "mothername": "Anitha",
-      "occupation": "Housewife",
-      "ctc": 8610209535,
-      "sex": "Female",
-      "bloodgrp": "b+",
-      "Phoneno": "9597374379",
-      "address": "NA",
-      "id": 4
-    }
-  ],
   "users": [
     {
-      "firstname": "mani",
+      "firstname": "Subramani",
       "Phoneno": "8610209535",
-      "email": "crazysanty007@gmail.com",
+      "email": "subramani007@gmail.com",
       "password": "Mani@123",
       "confirm": "Mani@123",
       "address": "14/254.srini press 1st cross ,chellakuttykaadu,salem-636015",
@@ -101,6 +39,46 @@
       "password": "Siva@2000",
       "confirm": "Siva@2000",
       "address": "352/612,kandhappa colony,annathanapatty,salem-636002",
+      "id": 2
+    }
+  ],
+  "account": [
+    {
+      "name": "Subramani",
+      "Pname": "Palanisamy",
+      "phone": "8925498970",
+      "email": "subramani007@gmail.com",
+      "pan": "6360159874",
+      "aadhar": "987654321987",
+      "id": 1
+    },
+    {
+      "name": "Shivaraja",
+      "Pname": "murugan",
+      "phone": "7904029565",
+      "email": "shivarajamurugan2000@gmail.com",
+      "pan": "98555555412",
+      "aadhar": "121213131414",
+      "id": 2
+    }
+  ],
+  "bankaccount": [
+    {
+      "bankname": "ELMS Bank",
+      "branch": "Salem",
+      "accountnumber": "6360150001",
+      "ifsccode": "ELMS0000ES1",
+      "micrcode": "636006001",
+      "email": "subramani007@gmail.com",
+      "id": 1
+    },
+    {
+      "bankname": "ELMS Bank",
+      "branch": "Salem",
+      "accountnumber": "6360150002",
+      "ifsccode": "ELMS0000ES1",
+      "micrcode": "636006001",
+      "email": "shivarajamurugan2000@gmail.com",
       "id": 2
     }
   ]

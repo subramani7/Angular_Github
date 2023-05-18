@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AccountComponent implements OnInit {
     update:FormGroup
-
+    Account:FormGroup
    name:any=sessionStorage.getItem('firstname');
   constructor(private service:ValidateService,private form:FormBuilder,private http:HttpClient,private route:Router) {
     this.update=this.form.group({
@@ -22,7 +22,22 @@ export class AccountComponent implements OnInit {
       confirm:[,Validators.required],
     address:[,Validators.required],
     })
+    this.Account=this.form.group({
+      name:[,Validators.required],
+      Pname:[,Validators.required],
+      phone:[,Validators.required],
+      email:[,Validators.required],
+      pan:[,Validators.required],
+      aadhar:[,Validators.required],
+    })
   }
+  accountSubmit() {
+    this.service.addAccountInfo(this.Account.value).subscribe((data) => {
+      alert('Form Submitted');
+      this.route.navigate(['/home']);
+    });
+  }
+
   registerDetails:any='';
   idvalue:any;
   firstname:any;
@@ -31,6 +46,7 @@ export class AccountComponent implements OnInit {
   password:any;
   confirm:any;
   address:any;
+
   ngOnInit() {
     this.service.getData().subscribe((data)=>{
      this.registerDetails=data;
@@ -56,13 +72,40 @@ export class AccountComponent implements OnInit {
      this.update.controls['confirm'].setValue(this.confirm);
      this.update.controls['address'].setValue(this.address);
      this.update.markAsPristine();
+     console.log(this.idvalue);
     }
-    )
+  )
+    this.sample();
 
   }
-  updateProfile(data:any){
-    // alert(this.idvalue);
 
+val:any=""
+accEmail:any=""
+  sample(){
+    this.http.get<any>("http://localhost:3000/account").subscribe(data=>{
+      const aEmail=data.find((b:any)=>{
+        return b.id===this.idvalue;
+      });
+      if(aEmail){
+        this.x(aEmail);
+      }
+    });
+    // this.ngOnInit();
+
+  }
+  x(email:any){
+    this.http.get<any>("http://localhost:3000/users").subscribe((dat)=>{
+      const getUser=dat.find((a:any)=>{
+        return a.id===email.id;
+      });
+      if(getUser){
+        this.http.get<any>("http://localhost:3000/bankaccount/"+getUser.id).subscribe(data=>{
+          this.val=data
+        })
+      }
+    })
+  }
+  updateProfile(data:any){
    if(!this.update.pristine){
     let updatedData={
       firstname: data.firstname,
@@ -101,6 +144,14 @@ export class AccountComponent implements OnInit {
   }
   closeProfile(){
     const close:any =document.querySelector(".update");
+    close.close();
+  }
+  bankaccount(){
+    const acc:any= document.querySelector(".account");
+    acc.showModal();
+  }
+  closeAccount(){
+    const close:any =document.querySelector(".account");
     close.close();
   }
 }
