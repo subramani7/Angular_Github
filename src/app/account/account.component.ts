@@ -23,21 +23,41 @@ export class AccountComponent implements OnInit {
     address:[,Validators.required],
     })
     this.Account=this.form.group({
-      name:[,Validators.required],
+      // name:[,Validators.required],
       Pname:[,Validators.required],
-      phone:[,Validators.required],
-      email:[,Validators.required],
+      // phone:[,Validators.required],
+      // email:[,Validators.required],
       pan:[,Validators.required],
-      aadhar:[,Validators.required],
+      aadhar:[,Validators.required]
     })
   }
+  accValue:any=""
   accountSubmit() {
     this.service.addAccountInfo(this.Account.value).subscribe((data) => {
+      this.accValue=data
       alert('Form Submitted');
-      this.route.navigate(['/home']);
+      this.generate(this.accValue)
+
+      // this.route.navigate(['myaccount']);
     });
+    // this.status=false
   }
 
+  generate(value:any){
+    var body={
+      bankname: "ELMS Bank",
+      branch: "Salem",
+      accountnumber: "636015000"+value.id,
+      ifsccode: "ELMS0000ES1",
+      micrcode: "636006001",
+      email: this.update.value.email,
+      status:"false",
+      id:value.id
+    }
+    this.http.post<any>("http://localhost:3000/bankaccount",body).subscribe(postVal=>{
+      alert("Posted")
+    })
+  }
   registerDetails:any='';
   idvalue:any;
   firstname:any;
@@ -47,6 +67,7 @@ export class AccountComponent implements OnInit {
   confirm:any;
   address:any;
 
+  status:any="true"
   ngOnInit() {
     this.service.getData().subscribe((data)=>{
      this.registerDetails=data;
@@ -55,6 +76,7 @@ export class AccountComponent implements OnInit {
       if(this.name==this.registerDetails[i].firstname){
          console.log(this.name);
          this.idvalue=i;
+         
          console.log(this.idvalue);
       }
      }
@@ -73,9 +95,15 @@ export class AccountComponent implements OnInit {
      this.update.controls['address'].setValue(this.address);
      this.update.markAsPristine();
      console.log(this.idvalue);
+
+     this.http.get<any>("http://localhost:3000/bankaccount/"+this.idvalue).subscribe(x=>{
+      this.status=x.status;
+
+    })
     }
   )
     this.sample();
+    // alert(this.idvalue)
 
   }
 

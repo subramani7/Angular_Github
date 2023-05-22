@@ -1,12 +1,18 @@
 <app-header></app-header>
 <div class="grid">
-  <div class="gridFirst">
+  <div class="gridFirst"  >
    <h1>Account</h1>
-   <span> Do not have an account...?  <a (click)="bankaccount()" style="cursor: pointer;">Click here</a> </span>
-   <p>{{val|json}}</p>
+   <div class="click" *ngIf="status">
+    <span> Do not have an account...?  <a (click)="bankaccount()" style="cursor: pointer;">Click here</a> </span>
+   </div>
+   <p>{{val.bankname}}</p>
+   <p>{{val.branch}}</p>
+   <p>{{val.accountnumber}}</p>
+   <p>{{val.ifsccode}}</p>
+   <p>{{val.micrcode}}</p>
+   <p>{{val.email}}</p>
   </div>
   <div class="gridSecond">
-
    <div class="profile">
     <img src="..\assets\Images\User-Profile-PNG-High-Quality-Image.png" alt="" width="80px" height="80px">
     <button (click)="profileUpdate()">Update profile</button>
@@ -32,8 +38,6 @@
       <p>&nbsp;&nbsp;&nbsp;{{address}}</p>
     </div>
    </div>
-
-
   </div>
 </div>
 
@@ -84,23 +88,28 @@
 
  <dialog class="account">
  <h1>Create Account</h1>
+ <div class="form" >
+  <label for="Name">Name:</label>
+  <!-- <input type="text" formControlName="name"  > -->
+  {{firstname}}
+</div>
+<div class="form">
+  <label for="phone"> PhoneNo:</label>
+  <!-- <input type="text" formControlName="phone" > -->
+  {{phoneno}}
+</div>
+<div class="form">
+  <label for="email">EmailID:</label>
+  <!-- <input type="email" formControlName="email" > -->
+  {{email}}
+</div>
  <form action=""(ngSubmit)="accountSubmit()" [formGroup]="Account">
-  <div class="form" >
-    <label for="Name">Name:</label>
-    <input type="text" formControlName="name"  >
-  </div>
+
   <div class="form">
     <label for="Pname">Parent name:</label>
     <input type="text"  formControlName="Pname"  >
   </div>
-  <div class="form">
-    <label for="phone"> PhoneNo:</label>
-    <input type="text" formControlName="phone" >
-  </div>
-  <div class="form">
-    <label for="email">EmailID:</label>
-    <input type="email" formControlName="email" >
-  </div>
+
   <div class="form">
     <label for="pan">PAN no:</label>
     <input type="text" formControlName="pan">

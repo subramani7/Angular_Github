@@ -40,26 +40,35 @@
       "confirm": "Siva@2000",
       "address": "352/612,kandhappa colony,annathanapatty,salem-636002",
       "id": 2
+    },
+    {
+      "firstname": "Aathmiga",
+      "Phoneno": "6380426608",
+      "email": "aathmiga24@gmail.com",
+      "password": "Aathmiga@123",
+      "confirm": "Aathmiga@123",
+      "address": "Tiruchengode",
+      "id": 3
     }
   ],
   "account": [
     {
-      "name": "Subramani",
       "Pname": "Palanisamy",
-      "phone": "8925498970",
-      "email": "subramani007@gmail.com",
       "pan": "6360159874",
       "aadhar": "987654321987",
       "id": 1
     },
     {
-      "name": "Shivaraja",
       "Pname": "murugan",
-      "phone": "7904029565",
-      "email": "shivarajamurugan2000@gmail.com",
       "pan": "98555555412",
       "aadhar": "121213131414",
       "id": 2
+    },
+    {
+      "Pname": "Muruganand",
+      "pan": "8956748585",
+      "aadhar": "123564789589",
+      "id": 3
     }
   ],
   "bankaccount": [
@@ -80,6 +89,16 @@
       "micrcode": "636006001",
       "email": "shivarajamurugan2000@gmail.com",
       "id": 2
+    },
+    {
+      "bankname": "ELMS Bank",
+      "branch": "Salem",
+      "accountnumber": "6360150003",
+      "ifsccode": "ELMS0000ES1",
+      "micrcode": "636006001",
+      "email": "aathmiga24@gmail.com",
+      "status": "false",
+      "id": 3
     }
   ]
 }

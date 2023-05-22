@@ -19,10 +19,7 @@ export class HeaderComponent implements OnInit {
     sessionStorage.clear();
     this.route.navigate(['/home']);
   }
-  account(){
-    alert('display profile');
-   this.route.navigate(['/myaccount']);
-  }
+
   ngOnInit() {
   }
 

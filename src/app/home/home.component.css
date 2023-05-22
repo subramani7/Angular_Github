@@ -21,11 +21,11 @@ button{
   margin-top: 5%;
   padding: 2% 10% 2% 10%;
   border-radius: 25px;
-  background-color: rgb(63, 179, 190);
+  background-color: rgb(51, 147, 237);
   border: none;
 }
 button:hover{
-  background-color: rgb(48, 149, 183)
+  background-color: rgb(164, 194, 235)
 }
 .homeStudyplans{
   font-weight: 800;
@@ -76,10 +76,10 @@ button:hover{
   margin-top: 5%;
   padding: 3%;
   /* position: fixed; */
-  background-color: #f3f2f2;
+  /* background-color: #f3f2f2; */
 }
 .a12:hover{
-  background-color: rgb(178, 236, 245);
+  background-color: rgb(160, 201, 239);
 }
 .homeAdvantagetitle{
   font-weight: bolder;
