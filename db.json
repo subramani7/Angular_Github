@@ -49,6 +49,15 @@
       "confirm": "Aathmiga@123",
       "address": "Tiruchengode",
       "id": 3
+    },
+    {
+      "firstname": "Harigokul",
+      "Phoneno": "9489922628",
+      "email": "harigokul476@gmail.com",
+      "password": "Aadvik@2229",
+      "confirm": "Aadvik@2229",
+      "address": "13/72-1,Thirunanam nagar -5,Dadagapatti,salem -636006",
+      "id": 4
     }
   ],
   "account": [
@@ -69,6 +78,12 @@
       "pan": "8956748585",
       "aadhar": "123564789589",
       "id": 3
+    },
+    {
+      "Pname": "Srinivasan",
+      "pan": "DCRPG9980B",
+      "aadhar": "265011843858",
+      "id": 4
     }
   ],
   "bankaccount": [
@@ -79,6 +94,7 @@
       "ifsccode": "ELMS0000ES1",
       "micrcode": "636006001",
       "email": "subramani007@gmail.com",
+      "status": "false",
       "id": 1
     },
     {
@@ -88,6 +104,7 @@
       "ifsccode": "ELMS0000ES1",
       "micrcode": "636006001",
       "email": "shivarajamurugan2000@gmail.com",
+      "status": "false",
       "id": 2
     },
     {
@@ -99,6 +116,16 @@
       "email": "aathmiga24@gmail.com",
       "status": "false",
       "id": 3
+    },
+    {
+      "bankname": "ELMS Bank",
+      "branch": "Salem",
+      "accountnumber": "6360150004",
+      "ifsccode": "ELMS0000ES1",
+      "micrcode": "636006001",
+      "email": "harigokul476@gmail.com",
+      "status": "false",
+      "id": 4
     }
   ]
 }

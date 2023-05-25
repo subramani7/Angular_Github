@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -29,12 +28,14 @@ import { StudyDetailsComponent } from './studyDetails/studyDetails.component';
 import { AccountDetailsComponent } from './accountDetails/accountDetails.component';
 import { LoanDetailsComponent } from './loanDetails/loanDetails.component';
 import { AccountComponent } from './account/account.component';
+// import { ForgetComponent } from '.e:/ANGULAR/angularVersiontwo/src/forget/forget.component';
+import { ForgetComponent } from './forget/forget.component';
 
 
 
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       HomeComponent,
       // AboutComponent,
@@ -58,7 +59,9 @@ import { AccountComponent } from './account/account.component';
       StudyDetailsComponent,
       AccountDetailsComponent,
       LoanDetailsComponent,
-      AccountComponent
+      AccountComponent,
+      // ForgetComponent
+      ForgetComponent
    ],
   imports: [
     BrowserModule,
