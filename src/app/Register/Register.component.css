@@ -1,58 +1,40 @@
-.registerDiv{
-   height: 100%;
+.registerDiv {
+  height: 100%;
   width: 100%;
 }
-.registerModel{
+
+.registerModel {
   display: flex;
-   /* justify-content: center; */
-  /* margin-top: 10%;
-  margin-bottom: 10%; */
   margin: 2% 40%;
-  padding: 3% ;
-  /* background-color: aquamarine; */
+  padding: 3%;
   width: fit-content;
-  /* border: 2px solid black; */
-  box-shadow: 0px 2px 20px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.75);
 }
-::placeholder{
-  font-family: 'Times New Roman', Times, serif;
-}
-.Registerusername{
+
+.Registerusername {
   margin-top: 15%;
   display: flex;
 }
-.head-content{
+
+.head-content {
   margin-left: 30%;
 }
-.exit{
-  float: right;
-  /* margin-left: 0%; */
-}
-.exit:hover{
-  color: red;
-  padding: 1%;
-  cursor: pointer;
-}
-input
-{
-  border: none;
-    background-color: transparent;
-    outline: none;
-    border-bottom: 2px solid black;
-  /* padding-left: 5% ; */
-  /* margin-top: 2%; */
-    margin-left: 5%;
-    font-size: 15px;
 
+input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 2px solid black;
+  margin-left: 5%;
+  font-size: 15px;
 }
-h2{
-  text-align: center;
+
+.registerconfirm {
+  margin-left: 33%;
+  margin-top: 10%;
 }
-.registerconfirm{
- margin-left: 33%;
- margin-top:10%;
-}
-button{
+
+button {
   padding: 5%;
   cursor: pointer;
   border: none;
@@ -60,29 +42,92 @@ button{
   border-bottom: 2px solid rgb(51, 147, 237);
   font-weight: bold;
 }
-button:hover{
-  background-color: rgb(253, 250, 250);
-  color: blue;
 
-
-}
-.error{
+.error {
   position: absolute;
   font-size: 12px;
   color: red;
   padding-left: 1.5%;
   font-family: 'Times New Roman', Times, serif;
-  /* padding-bottom: 3%; */
 }
 
-.photo{
+.photo {
   margin-top: 3%;
   display: flex;
 }
-textarea{
+
+textarea {
   outline: 0;
   padding-left: 3%;
 }
-p{
+
+p {
   color: rgb(89, 90, 91);
+}
+
+/* Responsive styles using @media queries */
+
+@media (max-width: 768px) {
+  .registerModel {
+    margin-left: 30%;
+    padding: 5%;
+  }
+
+  .head-content {
+    margin-left: 0;
+    text-align: center;
+  }
+  button{
+    align-items: center;
+  }
+  .Registerusername {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+  }
+
+  .Registerusername input {
+    margin-left: 0;
+  }
+
+  .registerconfirm {
+    margin-left: 0;
+    margin-top: 10%;
+  }
+
+  .address {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .registerModel {
+    margin-left: 20%;
+    padding: 5%;
+  }
+
+  .head-content {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .Registerusername {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+  }
+
+  .Registerusername input {
+    margin-left: 0;
+    margin-top: 5%;
+  }
+
+  .registerconfirm {
+    margin-left: 0;
+    margin-top: 10%;
+  }
+
+  .address {
+    text-align: center;
+  }
 }
