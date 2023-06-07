@@ -1,0 +1,77 @@
+/* Apply CSS to the <app-header> element */
+
+/* Apply CSS to elements with the class "accountForms" */
+.accountForms {
+  /* CSS styles for elements with the class "accountForms" */
+}
+
+/* Apply CSS to the <h2> element inside a <form> element */
+form h2 {
+  /* CSS styles for the <h2> element inside a <form> element */
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 25px;
+
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: rgb(127, 157, 255);
+  text-align: center;
+}
+
+/* Apply CSS to elements with the class "grid" */
+.grid {
+  /* CSS styles for elements with the class "grid" */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Apply CSS to the first column of elements inside a grid */
+.grid-first {
+  /* CSS styles for the first column of elements inside a grid */
+}
+
+/* Apply CSS to the second column of elements inside a grid */
+.grid-second {
+  /* CSS styles for the second column of elements inside a grid */
+}
+
+/* Apply CSS to <label> elements */
+label {
+  /* CSS styles for <label> elements */
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Apply CSS to <input> elements */
+input {
+  /* CSS styles for <input> elements */
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+input[type="checkbox"]{
+  width: 1%;
+  margin: 2%;
+}
+.terms{
+  display: flex;
+}
+.terms p{
+  margin: 1%;
+}
+
+/* Apply CSS to elements with the class "butt" */
+.butt {
+  /* CSS styles for elements with the class "butt" */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Apply CSS to <button> elements */
+button {
+  /* CSS styles for <button> elements */
+  padding: 10px 20px;
+}

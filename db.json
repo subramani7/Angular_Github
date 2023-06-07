@@ -127,5 +127,54 @@
       "status": "false",
       "id": 4
     }
+  ],
+  "personalInfo": [
+    {
+      "firstname": null,
+      "lastname": null,
+      "dob": null,
+      "age": null,
+      "fathername": null,
+      "mothername": null,
+      "fatheroccupation": null,
+      "motheroccupation": null,
+      "ctc": null,
+      "sex": null,
+      "bloodgrp": null,
+      "Phoneno": null,
+      "address": null,
+      "id": 1
+    }
+  ],
+  "studyInfo": [
+    {
+      "sslcregNo": null,
+      "hscregNo": null,
+      "collegeregNo": null,
+      "SSLCschoolName": null,
+      "HSCschoolName": null,
+      "SSLCMark": null,
+      "HSCMark": null,
+      "SSLCyearOfPassing": null,
+      "HSCyearOfPassing": null,
+      "CLGyearOfPassing": null,
+      "SSLCmarksheetNo": null,
+      "HSCmarksheetNo": null,
+      "SSLCDistrict": null,
+      "HSCDistrict": null,
+      "CLGDistrict": null,
+      "SSLCPercentage": null,
+      "HSCPercentage": null,
+      "course": null,
+      "clgName": null,
+      "sem": null,
+      "pincode": null,
+      "deptName": null,
+      "cgpa": null,
+      "currentYear": null,
+      "backlogs": null,
+      "address": null,
+      "id": 1
+    }
   ]
 }

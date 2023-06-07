@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-engineeringService',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./engineeringService.component.css']
 })
 export class EngineeringServiceComponent implements OnInit {
- 
-  constructor() { }
+
+
+  constructor( private route:Router) { }
 
   ngOnInit() {
   }
-
+  next(){
+    alert('Enter your correct personal details....')
+    this.route.navigate(['/personaldetails']);
+  }
 }

@@ -1,0 +1,90 @@
+<app-header></app-header>
+<link rel="stylesheet" href="AccDetailsForm.component.css">
+<div class="accountForms">
+
+  <form action="" [formGroup]="accountform">
+    <h2>Account and Loan Details</h2>
+   <div class="grid">
+     <div class="grid-first">
+       <label for="bank-name">Bank name:</label>
+       <input type="text" id="bank-name" name="bank-name" formControlName="bankname" required>
+       <div class="errorContainer" *ngIf="accountform.controls['bankname'].dirty">
+        <p class="error" *ngIf="accountform.controls['bankname'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>bankname can't be blank</p>
+        <p class="error" *ngIf="accountform.controls['bankname'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> bankname contain only alphabets</p>
+</div>
+       <label for="acc-no">Account no:</label>
+       <input type="text" id="acccountnum" name="acccountnum"  formControlName="acccountnum" required>
+       <div class="errorContainer" *ngIf="accountform.controls['acccountnum'].dirty">
+        <p class="error" *ngIf="accountform.controls['acccountnum'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>acccountnumber can't be blank</p>
+        <!-- <p class="error" *ngIf="accountform.controls['acccountnum'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> acccountnumber contain only number</p> -->
+</div>
+       <label for="  MICR">MICR code:</label>
+       <input type="text" id="micr-code" name="micr-code" formControlName="micr" required>
+       <div class="errorContainer" *ngIf="accountform.controls['micr'].dirty">
+        <p class="error" *ngIf="accountform.controls['micr'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>MICR can't be blank</p>
+        <!-- <p class="error" *ngIf="accountform.controls['micr'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> MICR contain only number</p> -->
+</div>
+       <label for="amount">AMT reguired <span>*</span> (As per the fees structure)</label>
+       <input type="text" id="amount" name="amount" formControlName="Amount" required>
+       <div class="errorContainer" *ngIf="accountform.controls['Amount'].dirty">
+        <p class="error" *ngIf="accountform.controls['Amount'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Amount can't be blank</p>
+        <p class="error" *ngIf="accountform.controls['Amount'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> Amount contain only number</p>
+</div>
+     </div>
+     <div class="grid-second">
+       <label for="branch">Branch name:</label>
+       <input type="text" id="branch-name" name="branch-name" formControlName="branchname" required>
+       <div class="errorContainer" *ngIf="accountform.controls['branchname'].dirty">
+        <p class="error" *ngIf="accountform.controls['branchname'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>branchname can't be blank</p>
+        <p class="error" *ngIf="accountform.controls['branchname'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> branchname contain only alphabets</p>
+</div>
+       <label for="IFSC">IFSC code:</label>
+       <input type="text" id="ifsc-code" name="ifsc-code" formControlName="ifsc" required>
+       <div class="errorContainer" *ngIf="accountform.controls['ifsc'].dirty">
+        <p class="error" *ngIf="accountform.controls['ifsc'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>ifsc can't be blank</p>
+        <!-- <p class="error" *ngIf="accountform.controls['ifsc'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> ifsc contain only number</p> -->
+</div>
+       <label for="phone">Phone no:</label>
+       <input type="text" id="phone" name="phone" formControlName="phone" required>
+       <div class="errorContainer" *ngIf="accountform.controls['phone'].dirty">
+        <p class="error" *ngIf="accountform.controls['phone'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>phone can't be blank</p>
+        <p class="error" *ngIf="accountform.controls['phone'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> phone contain only number</p>
+</div>
+     </div>
+   </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" formControlName="checkboxone" name="" id="" required >
+    <p>Eligibility Criteria: Lenders may have specific eligibility requirements regarding the borrower's age, citizenship, educational institution, course of study, academic performance, and co-applicant requirements.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" formControlName="checkboxtwo" name="" id="" required>
+    <p>Loan Amount: The maximum loan amount that can be availed is usually determined based on the cost of education, including tuition fees, living expenses, books, and other educational-related expenses. There may be a cap on the loan amount.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" formControlName="checkboxthree" name="" id="" required>
+    <p>Repayment Period: The repayment period is the duration within which the borrower is expected to repay the loan. It can range from several years to a couple of decades, depending on the terms of the loan and the lender's policies.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" formControlName="checkboxonefour" name="" id="" required>
+    <p>Interest Rate: Education loans typically have an interest rate, which can be fixed or variable. The interest rate can depend on factors such as the borrower's credit history, loan amount, and repayment period.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" formControlName="checkboxonefive" name="" id="" required>
+    <p>Repayment Options: Lenders may provide various repayment options, including monthly installments, deferred repayment, and income-based repayment plans. Each option may have its own terms and conditions.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox" class="checkbox" formControlName="checkboxonesix" name="" id="" required>
+    <p>Prepayment and Penalty Charges: Education loans may have provisions for prepayment of the loan amount before the designated repayment period. Lenders may also impose penalties or charges for late payments or defaults.</p>
+   </div>
+   <div class="terms">
+    <input type="checkbox"  class="checkbox" formControlName="checkboxoneseven" name="" id="" required>
+    <p>Documentation: Borrowers are typically required to provide supporting documents, such as proof of identity, address, educational institution admission letter, fee structure, academic records, and income-related documents.</p>
+   </div>
+   <div class="butt">
+    <button>Previous</button>
+    <button>Next</button>
+   </div>
+
+   </form>
+</div>
+

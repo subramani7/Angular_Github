@@ -6,7 +6,7 @@ import { AgricultureServiceComponent } from './agricultureService/agricultureSer
 import { ArtsServiceComponent } from './artsService/artsService.component';
 // import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contactUs/contactUs.component';
-import { EngineerFormComponent } from './form/EngineerForm.component';
+// import { EngineerFormComponent } from './form/personalDetailForm.component';
 import { EngineeringServiceComponent } from './engineeringService/engineeringService.component';
 import { HomeComponent } from './home/home.component';
 import { LoanDetailsComponent } from './loanDetails/loanDetails.component';
@@ -19,6 +19,9 @@ import { StudyDetailsComponent } from './studyDetails/studyDetails.component';
 import { UsersComponent } from './users/users.component';
 import { AuthGuard } from './auth.guard';
 import { AccountComponent } from './account/account.component';
+import { PersonalDetailsFormComponent } from './Forms/PersonalDetailsForm/PersonalDetailsForm.component';
+import { StudyDetailsFormComponent } from './Forms/StudyDetailsForm/StudyDetailsForm.component';
+import { AccDetailsFormComponent } from './Forms/AccDetailsForm/AccDetailsForm.component';
 // import { StudyDetailsFormComponent } from './form/studyDetailsForm/studyDetailsForm.component';
 
 const routes: Routes = [
@@ -70,8 +73,20 @@ const routes: Routes = [
   },
   {
     path:'service/engineer/Eform',
-    component:EngineerFormComponent,
+   component:PersonalDetailsFormComponent,
   },
+  {
+   path:'studydetails',
+   component:StudyDetailsFormComponent,
+  },
+  {
+    path:'accountdetails',
+    component:AccDetailsFormComponent,
+   },
+   {
+    path:'personaldetails',
+    component:PersonalDetailsFormComponent,
+   },
   {
     path:'admin',
     component:AdminComponent,

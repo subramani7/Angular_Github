@@ -1,0 +1,29 @@
+/* Apply CSS to elements with the class "documents" */
+.documents {
+  /* CSS styles for elements with the class "documents" */
+}
+
+/* Apply CSS to <h1> element inside elements with the class "documents" */
+.documents h1 {
+  /* CSS styles for <h1> element inside elements with the class "documents" */
+  margin-top: 1%;
+  border-radius: 25px;
+
+  margin-bottom: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: rgb(127, 157, 255);
+  text-align: center;
+}
+
+/* Apply CSS to <p> elements inside elements with the class "documents" */
+.documents p {
+  /* CSS styles for <p> elements inside elements with the class "documents" */
+  margin: 10px 0;
+}
+
+/* Apply CSS to <input> elements inside elements with the class "documents" */
+.documents input[type="file"] {
+  /* CSS styles for <input> elements of type "file" inside elements with the class "documents" */
+  margin-bottom: 10px;
+}

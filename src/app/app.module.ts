@@ -13,7 +13,6 @@ import { EngineeringServiceComponent } from './engineeringService/engineeringSer
 import { ArtsServiceComponent } from './artsService/artsService.component';
 import { MedicalServiceComponent } from './medicalService/medicalService.component';
 import { AgricultureServiceComponent } from './agricultureService/agricultureService.component';
-import { EngineerFormComponent } from './form/EngineerForm.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
@@ -30,6 +29,10 @@ import { LoanDetailsComponent } from './loanDetails/loanDetails.component';
 import { AccountComponent } from './account/account.component';
 // import { ForgetComponent } from '.e:/ANGULAR/angularVersiontwo/src/forget/forget.component';
 import { ForgetComponent } from './forget/forget.component';
+import { AccDetailsFormComponent } from './Forms/AccDetailsForm/AccDetailsForm.component';
+import { DocumentFormComponent } from './Forms/DocumentForm/DocumentForm.component';
+import { PersonalDetailsFormComponent } from './Forms/PersonalDetailsForm/PersonalDetailsForm.component';
+import { StudyDetailsFormComponent } from './Forms/StudyDetailsForm/StudyDetailsForm.component';
 
 
 
@@ -47,7 +50,7 @@ import { ForgetComponent } from './forget/forget.component';
       ArtsServiceComponent,
       MedicalServiceComponent,
       AgricultureServiceComponent,
-      EngineerFormComponent,
+      PersonalDetailsComponent,
       AdminComponent,
       HeaderComponent,
       FooterComponent,
@@ -61,7 +64,11 @@ import { ForgetComponent } from './forget/forget.component';
       LoanDetailsComponent,
       AccountComponent,
       // ForgetComponent
-      ForgetComponent
+      ForgetComponent,
+      AccDetailsFormComponent,
+      DocumentFormComponent,
+      PersonalDetailsFormComponent,
+      StudyDetailsFormComponent
    ],
   imports: [
     BrowserModule,

@@ -15,6 +15,10 @@ export class ValidateService
   addPersonalInfo(data:any){
     return this.client.post("http://localhost:3000/personalInfo",data);
   }
+  addStudyInfo(data:any){
+    return this.client.post("http://localhost:3000/studyInfo",data);
+  }
+  
   addAccountInfo(data:any){
    return this.client.post("http://localhost:3000/account",data);
   }

@@ -1,0 +1,78 @@
+
+
+.grid {
+  /* Add styles for the grid container */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+h1{
+  text-align: center;
+}
+h2{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 25px;
+  background-color: rgb(127, 157, 255);
+  text-align: center;
+}
+label {
+  /* Add styles for labels */
+  display: block;
+  font-weight: bold;
+  margin-top: 5px;
+  padding-top: 2%;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  /* Add common styles for input fields, select, and textarea */
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  /* Add styles for textarea */
+  resize: vertical;
+}
+
+
+
+.error {
+  /* Add styles for error messages */
+  position: absolute;
+  font-size: 10px;
+  color: red;
+}
+
+.butt {
+  /* Add styles for buttons container */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  /* Add styles for buttons */
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:disabled {
+  /* Add styles for disabled buttons */
+  background-color: #ccc;
+  cursor: not-allowed;
+}

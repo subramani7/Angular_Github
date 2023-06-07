@@ -1,0 +1,125 @@
+<app-header></app-header>
+<div class="personalDetails">
+
+  <form [formGroup]="personalForms" (ngSubmit)="personalSubmit()">
+    <h1>Education Loan Application form</h1>
+    <h2>Personal details</h2>
+    <div class="grid">
+      <div class="grid-first">
+        <label for="name">First Name:</label>
+        <input type="text" id="firstname" name="firstname" formControlName="firstname">
+        <div class="errorContainer" *ngIf="personalForms.controls['firstname'].dirty">
+          <p class="error" *ngIf="personalForms.controls['firstname'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>first Name can't be blank</p>
+          <p class="error" *ngIf="personalForms.controls['firstname'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>first Name contain only alphabets</p>
+  </div>
+
+
+        <label for="dob">DOB:</label>
+        <input type="date" id="dob" name="dob" formControlName="dob" required>
+        <div class="errorContainer" *ngIf="personalForms.controls['dob'].dirty">
+          <p class="error" *ngIf="personalForms.controls['dob'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>DOB can't be blank</p>
+          <!-- <p class="error" *ngIf="personalForms.controls['firstname'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>User Name contain only alphabets</p> -->
+  </div>
+
+        <label for="name">Father/guardian name:</label>
+        <input type="text" id="f-name" name="f-name" formControlName="fathername" required>
+        <div class="errorContainer" *ngIf="personalForms.controls['fathername'].dirty">
+          <p class="error" *ngIf="personalForms.controls['fathername'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Father Name can't be blank</p>
+          <p class="error" *ngIf="personalForms.controls['fathername'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Father Name contain only alphabets</p>
+  </div>
+
+        <label for="name">Mother name:</label>
+        <input type="text" id="m-name" name="m-name"  formControlName="mothername"  required>
+        <div class="errorContainer" *ngIf="personalForms.controls['mothername'].dirty">
+          <p class="error" *ngIf="personalForms.controls['mothername'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Mother name Name can't be blank</p>
+          <p class="error" *ngIf="personalForms.controls['mothername'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Mother name Name contain only alphabets</p>
+  </div>
+
+        <label for="ctc">Annual CTC:</label>
+        <input type="number" id="ctc" name="ctc" formControlName="ctc" required>
+        <div class="errorContainer" *ngIf="personalForms.controls['ctc'].dirty">
+          <p class="error" *ngIf="personalForms.controls['ctc'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>CTC can't be blank</p>
+          <p class="error" *ngIf="personalForms.controls['ctc'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> Enter valid CTC</p>
+  </div>
+
+        <label for="blood-grp">Blood group:</label>
+        <select id="blood-grp" name="blood-grp" formControlName="bloodgrp" required>
+          <option value="">Select the Blood group </option>
+          <option value="a+">A+</option>
+          <option value="a-">A-</option>
+          <option value="b+">B+</option>
+          <option value="b-">B-</option>
+          <option value="o+">O+</option>
+          <option value="o-">O-</option>
+          <option value="ab+">AB+</option>
+          <option value="ab-">AB-</option>
+        </select>
+        <div class="errorContainer" *ngIf="personalForms.controls['bloodgrp'].dirty">
+          <p class="error" *ngIf="personalForms.controls['bloodgrp'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>bloodgroup can't be blank</p>
+          <!-- <p class="error" *ngIf="personalForms.controls['blood-grp'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>User Name contain only alphabets</p> -->
+  </div>
+
+      </div>
+      <div class="grid-second">
+        <label for="name">Last name:</label>
+        <input type="text" id="lastname" name="lastname"  formControlName="lastname" required>
+        <div class="errorContainer" *ngIf="personalForms.controls['lastname'].dirty">
+          <p class="error" *ngIf="personalForms.controls['lastname'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>last Name can't be blank</p>
+          <p class="error" *ngIf="personalForms.controls['lastname'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>last Name contain only alphabets</p>
+  </div>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" formControlName="age" required>
+    <div class="errorContainer" *ngIf="personalForms.controls['age'].dirty">
+      <p class="error" *ngIf="personalForms.controls['age'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Age can't be blank</p>
+      <!-- <p class="error" *ngIf="personalForms.controls['age'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>last Name contain only alphabets</p> -->
+  </div>
+
+    <label for="occupation">Father/guardian occupation:</label>
+    <input type="text" id="occupation" name="occupation" formControlName="fatheroccupation" required>
+    <div class="errorContainer" *ngIf="personalForms.controls['fatheroccupation'].dirty">
+      <p class="error" *ngIf="personalForms.controls['fatheroccupation'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Occupation can't be blank</p>
+      <p class="error" *ngIf="personalForms.controls['fatheroccupation'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Occupation contain only alphabets</p>
+  </div>
+
+    <label for="occupation">Mother occupation:</label>
+    <input type="text" id="occupation" name="occupation" formControlName="motheroccupation" required>
+    <div class="errorContainer" *ngIf="personalForms.controls['motheroccupation'].dirty">
+      <p class="error" *ngIf="personalForms.controls['motheroccupation'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Occupation can't be blank</p>
+      <p class="error" *ngIf="personalForms.controls['motheroccupation'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Occupation contain only alphabets</p>
+  </div>
+
+    <label for="sex">Sex:</label>
+    <select id="sex" name="sex" formControlName="sex" required>
+      <!-- <option value="">Select Repayment Period</option> -->
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="others">Others</option>
+    </select>
+    <div class="errorContainer" *ngIf="personalForms.controls['sex'].dirty">
+      <p class="error" *ngIf="personalForms.controls['sex'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>sex can't be blank</p>
+      <!-- <p class="error" *ngIf="personalForms.controls['sex'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Occupation contain only alphabets</p> -->
+  </div>
+
+    <label for="ph-number">Phone number:</label>
+    <input type="text" id="ph-num" name="ph-num" formControlName="Phoneno" required>
+    <div class="errorContainer" *ngIf="personalForms.controls['Phoneno'].dirty">
+      <p class="error" *ngIf="personalForms.controls['Phoneno'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Phoneno can't be blank</p>
+      <p class="error" *ngIf="personalForms.controls['Phoneno'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> Enter valid phone number</p>
+  </div>
+      </div>
+    </div>
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" formControlName="address"></textarea>
+    <div class="errorContainer" *ngIf="personalForms.controls['address'].dirty">
+      <p class="error" *ngIf="personalForms.controls['address'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>address can't be blank</p>
+      <!-- <p class="error" *ngIf="personalForms.controls['address'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> Enter valid phone number</p> -->
+  </div>
+
+    <div class="butt">
+      <button (click)="backPage()">back</button>
+      <button  >Next</button>
+    </div>
+
+  </form>
+</div>

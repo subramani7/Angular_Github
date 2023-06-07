@@ -1,0 +1,306 @@
+<app-header></app-header>
+<link rel="stylesheet" href="StudyDetailsForm.component.css">
+<div class="studyForms">
+  <form [formGroup]="studyForm" (ngSubmit)="submitForm()">
+    <h2>Study details</h2>
+    <h3>SSLC</h3>
+    <div class="grid">
+      <div class="grid-first">
+        <label for="reg-no">Register NO:</label>
+        <input type="text" id="reg-no" name="reg-no" formControlName="sslcregNo" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['sslcregNo'].dirty">
+          <p class="error" *ngIf="studyForm.controls['sslcregNo'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>reg-No can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['sslcregNo'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>reg-No contain only number</p>
+  </div>
+
+        <label for="scl-name">School Name:</label>
+        <input type="text" id="scl-name" name="scl-name" formControlName="SSLCschoolName" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['SSLCschoolName'].dirty">
+          <p class="error" *ngIf="studyForm.controls['SSLCschoolName'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>schoolName can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['SSLCschoolName'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>schoolName contain only alphabets</p>
+  </div>
+
+        <label for="mark">SSLC mark:</label>
+        <input type="text" id="mark" name="mark" formControlName="SSLCMark" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['SSLCMark'].dirty">
+          <p class="error" *ngIf="studyForm.controls['SSLCMark'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Mark can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['SSLCMark'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Mark contain only number</p>
+  </div>
+
+        <label for="passing">Year of passing:</label>
+        <input type="text" id="passing" name="passing" formControlName="SSLCyearOfPassing" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['SSLCyearOfPassing'].dirty">
+          <p class="error" *ngIf="studyForm.controls['SSLCyearOfPassing'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>yearOfPassing can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['SSLCyearOfPassing'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>yearOfPassing contain only number</p>
+  </div>
+
+      </div>
+      <div class="grid-second">
+        <label for="mark-no">Marksheet No:</label>
+        <input type="text" id="mark-no" name="mark-no" formControlName="SSLCmarksheetNo" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['SSLCmarksheetNo'].dirty">
+          <p class="error" *ngIf="studyForm.controls['SSLCmarksheetNo'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>marksheetNo can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['SSLCmarksheetNo'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>marksheetNo contain only number</p>
+  </div>
+
+        <label for="scl-dist">School district:</label>
+        <input type="text" id="scl-district" name="scl-district" formControlName="SSLCDistrict" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['SSLCDistrict'].dirty">
+          <p class="error" *ngIf="studyForm.controls['SSLCDistrict'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>District can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['SSLCDistrict'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>District contain only alphabets</p>
+  </div>
+
+
+        <label for="percentage">SSLC percentage:</label>
+        <input type="text" id="percentage" name="percentage" formControlName="SSLCPercentage" maxlength="3" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['SSLCPercentage'].dirty">
+          <p class="error" *ngIf="studyForm.controls['SSLCPercentage'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Percentage can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['SSLCPercentage'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Percentage contain only number</p>
+  </div>
+
+      </div>
+    </div>
+    <h3>HSC</h3>
+    <div class="grid">
+      <div class="grid-first">
+        <label for="reg-no">Register NO:</label>
+        <input type="text" id="Reg-no" name="reg-no" formControlName="hscregNo" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['hscregNo'].dirty">
+          <p class="error" *ngIf="studyForm.controls['hscregNo'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>reg-No can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['hscregNo'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>reg-No contain only number</p>
+  </div>
+
+        <label for="scl-name">School Name:</label>
+        <input type="text" id="scl-name" name="scl-name" formControlName="HSCschoolName" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['HSCschoolName'].dirty">
+          <p class="error" *ngIf="studyForm.controls['HSCschoolName'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>schoolName can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['HSCschoolName'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>schoolName contain only alphabets</p>
+  </div>
+
+        <label for="mark">HSC mark:</label>
+        <input type="text" id="mark" name="mark" formControlName="HSCMark" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['HSCMark'].dirty">
+          <p class="error" *ngIf="studyForm.controls['HSCMark'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Mark can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['HSCMark'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Mark contain only number</p>
+  </div>
+
+        <label for="passing">Year of passing:</label>
+        <input type="text" id="passing" name="passing" formControlName="HSCyearOfPassing"  required>
+        <div class="errorContainer" *ngIf="studyForm.controls['HSCyearOfPassing'].dirty">
+          <p class="error" *ngIf="studyForm.controls['HSCyearOfPassing'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>yearOfPassing can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['HSCyearOfPassing'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>yearOfPassing contain only number</p>
+  </div>
+
+      </div>
+      <div class="grid-second">
+        <label for="mark-no">Marksheet No:</label>
+        <input type="text" id="mark-no" name="mark-no"formControlName="HSCmarksheetNo" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['HSCmarksheetNo'].dirty">
+          <p class="error" *ngIf="studyForm.controls['HSCmarksheetNo'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>marksheetNo can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['HSCmarksheetNo'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>marksheetNo contain only number</p>
+  </div>
+
+        <label for="scl-dist">School district:</label>
+        <input type="text" id="scl-district" name="scl-district" formControlName="HSCDistrict" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['HSCDistrict'].dirty">
+          <p class="error" *ngIf="studyForm.controls['HSCDistrict'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>District can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['HSCDistrict'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>District contain only alphabets</p>
+  </div>
+
+        <label for="percentage">HSC percentage:</label>
+        <input type="text" id="percentage" name="percentage" formControlName="HSCPercentage" required>
+        <div class="errorContainer" *ngIf="studyForm.controls['HSCPercentage'].dirty">
+          <p class="error" *ngIf="studyForm.controls['HSCPercentage'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Percentage can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['HSCPercentage'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Percentage contain only number</p>
+  </div>
+
+      </div>
+    </div>
+    <h3>College</h3>
+    Select the course:<select id="course" name="course" formControlName="course" required>
+     <option value="engineering">Engineering</option>
+     <option value="Arts & Science">Arts & Science</option>
+     <option value="Medical ">Medical course</option>
+     <option value="Agriculture ">Agriculture</option>
+   </select>
+    <div class="grid">
+     <div class="grid-first">
+       <label for="reg-no">Register no:</label>
+       <input type="text" id="Reg-no" name="reg-no" formControlName="collegeregNo"  required>
+       <div class="errorContainer" *ngIf="studyForm.controls['collegeregNo'].dirty">
+        <p class="error" *ngIf="studyForm.controls['collegeregNo'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>reg-No can't be blank</p>
+        <p class="error" *ngIf="studyForm.controls['collegeregNo'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>reg-No contain only number</p>
+</div>
+
+       <label for="college-name">College name:</label>
+       <input type="text" id="college-name" name="college-name" formControlName="clgName" required>
+       <div class="errorContainer" *ngIf="studyForm.controls['clgName'].dirty">
+        <p class="error" *ngIf="studyForm.controls['clgName'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>college-name can't be blank</p>
+        <p class="error" *ngIf="studyForm.controls['clgName'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>college-name contain only alphabets</p>
+</div>
+
+       <label for="percentage">Current semester:</label>
+       <input type="text" id="sem" name="sem" formControlName="sem" required>
+       <div class="errorContainer" *ngIf="studyForm.controls['sem'].dirty">
+        <p class="error" *ngIf="studyForm.controls['sem'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>sem can't be blank</p>
+        <p class="error" *ngIf="studyForm.controls['sem'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>sem contain only numbers</p>
+</div>
+
+       <label for="passing">Year of passing:</label>
+       <input type="text" id="passing" name="passing" formControlName="CLGyearOfPassing"   required>
+       <div class="errorContainer" *ngIf="studyForm.controls['CLGyearOfPassing'].dirty">
+        <p class="error" *ngIf="studyForm.controls['CLGyearOfPassing'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>yearOfPassing can't be blank</p>
+        <p class="error" *ngIf="studyForm.controls['CLGyearOfPassing'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>yearOfPassing contain only number</p>
+</div>
+
+       <label for="pincode"> Pincode:</label>
+       <input type="text" id="pincode" name="pincode" formControlName="pincode"  required>
+       <div class="errorContainer" *ngIf="studyForm.controls['pincode'].dirty">
+        <p class="error" *ngIf="studyForm.controls['pincode'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>pincode can't be blank</p>
+        <p class="error" *ngIf="studyForm.controls['pincode'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>pincode contain only number</p>
+</div>
+
+     </div>
+     <div class="grid-second">
+       <label for="Department-name">Department name:</label>
+       <input type="text" id="Department-name" name="Department-name" formControlName="deptName"  required>
+       <div class="errorContainer" *ngIf="studyForm.controls['deptName'].dirty">
+        <p class="error" *ngIf="studyForm.controls['deptName'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>deptName can't be blank</p>
+        <p class="error" *ngIf="studyForm.controls['deptName'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>deptName contain only alphabets</p>
+</div>
+
+       <label for="cgpa">Current CGPA:</label>
+       <input type="text" id="cgpa" name="cgpa" formControlName="cgpa"  required>
+       <div class="errorContainer" *ngIf="studyForm.controls['cgpa'].dirty">
+        <p class="error" *ngIf="studyForm.controls['cgpa'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>cgpa can't be blank</p>
+        <p class="error" *ngIf="studyForm.controls['cgpa'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>cgpa contain only number</p>
+</div>
+
+       <label for="c-year">Current year:</label>
+       <input type="text" id="c-year" name="c-year" formControlName="currentYear"  required>
+       <div class="errorContainer" *ngIf="studyForm.controls['currentYear'].dirty">
+        <p class="error" *ngIf="studyForm.controls['currentYear'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>currentYear can't be blank</p>
+        <p class="error" *ngIf="studyForm.controls['currentYear'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>currentYear contain only number</p>
+</div>
+
+       <label for="backlogs">Backlogs:</label>
+       <select id="backlogs" name="backlogs" formControlName="backlogs"  required>
+         <option value="NA">NA</option>
+         <option value="NSA">NSA</option>
+         <option value="NHA ">NHA</option>
+         <option value="SA ">SA</option>
+       </select>
+       <label for="college-dist">College district:</label>
+       <input type="text" id="college-district" name="college-district" formControlName="CLGDistrict"  required>
+       <div class="errorContainer" *ngIf="studyForm.controls['CLGDistrict'].dirty">
+        <p class="error" *ngIf="studyForm.controls['CLGDistrict'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>District can't be blank</p>
+        <p class="error" *ngIf="studyForm.controls['CLGDistrict'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>District contain only number</p>
+</div>
+
+     </div>
+   </div>
+   <label for="address">Address:</label>
+   <textarea id="address" name="address" formControlName="address"></textarea>
+   <div class="errorContainer" *ngIf="studyForm.controls['address'].dirty">
+    <p class="error" *ngIf="studyForm.controls['address'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>address can't be blank</p>
+    <!-- <p class="error" *ngIf="studyForm.controls['currentYear'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>currentYear contain only number</p> -->
+</div>
+
+   <div class="butt">
+     <button (click)="Previous()">Previous</button>
+     <button >Next</button>
+   </div>
+    <!-- Add submit button or additional form controls here -->
+  </form>
+  <!-- <form action="">
+    <h2>Study details</h2>
+    <h3>SSLC</h3>
+    <div class="grid">
+      <div class="grid-first">
+        <label for="reg-no">Register NO:</label>
+        <input type="text" id="Reg-no" name="reg-no" required>
+        <label for="scl-name">School Name:</label>
+        <input type="text" id="scl-name" name="scl-name" required>
+        <label for="mark">SSLC mark:</label>
+        <input type="text" id="mark" name="mark" required>
+        <label for="passing">Year of passing:</label>
+        <input type="text" id="passing" name="passing" required>
+      </div>
+      <div class="grid-second">
+        <label for="mark-no">Marksheet No:</label>
+        <input type="text" id="mark-no" name="mark-no" required>
+        <label for="scl-dist">School district:</label>
+        <input type="text" id="scl-district" name="scl-district" required>
+        <label for="percentage">SSLC percentage:</label>
+        <input type="text" id="percentage" name="percentage" required>
+      </div>
+    </div>
+    <h3>HSC</h3>
+    <div class="grid">
+      <div class="grid-first">
+        <label for="reg-no">Register NO:</label>
+        <input type="text" id="Reg-no" name="reg-no" required>
+        <label for="scl-name">School Name:</label>
+        <input type="text" id="scl-name" name="scl-name" required>
+        <label for="mark">HSC mark:</label>
+        <input type="text" id="mark" name="mark" required>
+        <label for="passing">Year of passing:</label>
+        <input type="text" id="passing" name="passing" required>
+      </div>
+      <div class="grid-second">
+        <label for="mark-no">Marksheet No:</label>
+        <input type="text" id="mark-no" name="mark-no" required>
+        <label for="scl-dist">School district:</label>
+        <input type="text" id="scl-district" name="scl-district" required>
+        <label for="percentage">HSC percentage:</label>
+        <input type="text" id="percentage" name="percentage" required>
+      </div>
+    </div>
+     <h3>College</h3>
+     Select the course:<select id="course" name="course" required>
+      <option value="engineering">Engineering</option>
+      <option value="Arts & Science">Arts & Science</option>
+      <option value="Medical ">Medical course</option>
+      <option value="Agriculture ">Agriculture</option>
+    </select>
+     <div class="grid">
+      <div class="grid-first">
+        <label for="reg-no">Register no:</label>
+        <input type="text" id="Reg-no" name="reg-no" required>
+        <label for="college-name">College name:</label>
+        <input type="text" id="college-name" name="college-name" required>
+        <label for="percentage">Current semester:</label>
+        <input type="text" id="percentage" name="percentage" required>
+
+        <label for="passing">Year of passing:</label>
+        <input type="text" id="passing" name="passing" required>
+        <label for="pincode"> Pincode:</label>
+        <input type="text" id="pincode" name="pincode" required>
+
+      </div>
+      <div class="grid-second">
+        <label for="Department-name">Department name:</label>
+        <input type="text" id="Department-name" name="Department-name" required>
+        <label for="cgpa">Current CGPA:</label>
+        <input type="text" id="cgpa" name="cgpa" required>
+        <label for="c-year">Current year:</label>
+        <input type="text" id="c-year" name="c-year" required>
+        <label for="backlogs">Backlogs:</label>
+        <select id="backlogs" name="backlogs" required>
+          <option value="NA">NA</option>
+          <option value="NSA">NSA</option>
+          <option value="NHA ">NHA</option>
+          <option value="SA ">SA</option>
+        </select>
+        <label for="college-dist">College district:</label>
+        <input type="text" id="college-district" name="college-district" required>
+      </div>
+    </div>
+    <label for="address">Address:</label>
+    <textarea id="address" name="address"></textarea>
+    <div class="butt">
+      <button>Previous</button>
+      <button>Next</button>
+    </div>
+  </form> -->
+</div>
