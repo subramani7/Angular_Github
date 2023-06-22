@@ -1,14 +1,8 @@
 <app-adminHeader></app-adminHeader>
 
 
-<div class="grid">
-  <div class="gridFirst">
-      <button id="button"><a routerLink="/users">User details</a></button><br>
-      <button><a> Account    &nbsp; &nbsp;  &nbsp;  </a></button><br>
-      <button><a> Loan Status </a></button>
-  </div>
-
-<div class="gridSecond">
+{{getDetails|json}}
+<br>
   <div class="searchBar">
     <div class="search">
       <!-- <p>Enter the Name :</p> -->
@@ -35,8 +29,8 @@
         <th>Password</th>
         <th>Address</th>
         <th>Loan Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-        <th>Bank account</th>
-        <th>Close account</th>
+        <!-- <th>Bank account</th> -->
+        <th>Delete account</th>
         <th></th>
       </tr>
     </thead>
@@ -45,15 +39,14 @@
         <td>{{detail.id}}</td>
         <td>{{detail.firstname}}</td>
         <td>{{detail.Phoneno}}</td>
-        <td> {{detail.email}}</td>
-        <td> {{detail.password}}</td>
+        <td>{{detail.email}}</td>
+        <td>{{detail.password}}</td>
         <td>{{detail.address}}</td>
-        <td> <button><a routerLink="/loan">view</a></button></td>
-        <td><button ><a routerLink="/account">view</a></button></td>
-        <td><button>Close</button></td>
+        <td> <button id="loanStatus" (click)="loanstatus(detail)" ><a >View</a></button></td>
+        <!-- <td><button ><a routerLink="/account">View</a></button></td> -->
+        <td><button id="delete" (click)="delete(detail)">Delete</button></td>
       </tr>
     </tbody>
   </table>
-</div>
-</div>
 
+{{a|json}}

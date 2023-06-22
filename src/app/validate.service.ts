@@ -18,7 +18,9 @@ export class ValidateService
   addStudyInfo(data:any){
     return this.client.post("http://localhost:3000/studyInfo",data);
   }
-  
+  addaccFormInfo(data:any){
+    return this.client.post("http://localhost:3000/accFormInfo",data)
+  }
   addAccountInfo(data:any){
    return this.client.post("http://localhost:3000/account",data);
   }
@@ -27,6 +29,12 @@ getData(): Observable <any>{
 }
 getPersonalInfo():Observable<any>{
   return this.client.get("http://localhost:3000/personalInfo");
+}
+getStudyInfo():Observable<any>{
+  return this.client.get("http://localhost:3000/studyInfo");
+}
+getaccFormInfo():Observable<any>{
+  return this.client.get("http://localhost:3000/accFormInfo");
 }
 updateuserInfo(data:any,id:any){
   return this.client.patch(`http://localhost:3000/users/${id}`,data);

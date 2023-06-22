@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -9,12 +10,14 @@ import { ValidateService } from 'src/app/validate.service';
   styleUrls: ['./PersonalDetailsForm.component.css']
 })
 export class PersonalDetailsFormComponent implements OnInit {
+  getDetails: any;
 
   constructor(
 
     private fb: FormBuilder,
     private Reg: ValidateService,
-    private route: Router
+    private route: Router,
+    private http:HttpClient
   ) {}
   personalForms = this.fb.group(
     {
@@ -26,7 +29,7 @@ export class PersonalDetailsFormComponent implements OnInit {
       mothername:[, [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
       fatheroccupation:[, [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
       motheroccupation:[, [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
-      ctc:[, [Validators.required,Validators.pattern('^[6-9]{1}[0-9]{9}$')]],
+      ctc:[, [Validators.required,]],
       sex:[, [Validators.required,]],
       bloodgrp:[, [Validators.required,]],
       Phoneno:[, [Validators.required,Validators.pattern('^[6-9]{1}[0-9]{9}$')]],
@@ -40,12 +43,25 @@ export class PersonalDetailsFormComponent implements OnInit {
       this.route.navigate(['/studydetails']);
     });
   }
+
 // next(){
 //   alert('Enter your correct studies details....')
 //   this.route.navigate(['/studydetails']);
 // }
 
     ngOnInit() {
+      const a=sessionStorage.getItem("login");
+      if(a){
+        this.getDetails=JSON.parse(a);
+      }
+      this.http.get<any>('http://localhost:3000/personalInfo').subscribe((data)=>{
+      // const user=data.find((u:any)=>);
+      const user=data;
+      if(user.firstname===this.getDetails.firstname){
+        sessionStorage.setItem("detail",JSON.stringify(user));
+      }
+      })
+
     }
 
   backPage()

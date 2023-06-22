@@ -36,7 +36,7 @@ export class LoginComponent{
       {
        alert('login successfully');
        this.loginform.reset();
-       this.route.navigate(['/admin']);
+       this.route.navigate(['/users']);
       }
       else
       {
@@ -59,7 +59,7 @@ export class LoginComponent{
       // sessionStorage.setItem("firstname",)
       // console.log();
       sessionStorage.setItem("success","true");
-
+      sessionStorage.setItem("login",JSON.stringify(user));
       this.service.userlogin=true;
       this.route.navigate(['/home']);
      }

@@ -1,58 +1,98 @@
-.grid{
+
+.grid {
   display: grid;
-  grid-template-columns: 60% 40%;
-
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
 
-.gridFirst h1{
-  margin-left: 35%;
-}
-
-.details label{
-  font-size: 15px;
-  font-weight: bolder;
-}
-
-button{
-  margin-left: 6%;
-  margin-top: 5%;
-  padding: 2% 5% 2% 5% ;
-  font-weight: bolder;
-  background-color: rgb(28, 131, 234);
-  border: none;
-  border-radius: 15px;
-}
-button:hover{
-  background-color: aquamarine;
-}
-.gridSecond{
-  padding: 5%;
-  margin-top: 6%;
-  margin-right: 15%;
-  display: grid;
-  grid-template-columns: 30% 70%;
-  background-color: rgb(193, 226, 245);
+.gridFirst {
+  background-color: #eeeeee;
+  padding: 20px;
+  margin: 5%;
   border-radius: 25px;
 }
-.gridSecond h1{
-  text-align: center;
+.gridFirst h1{
+  margin-left: 35%;
+  color: blue;
 }
-.gridSecond p
-{
-  font-size: 12px;
- text-align: left;
+.acc{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-gap: 20px;
 }
-.profile{
-  margin-top: 15%;
+.acc1{
+  font-weight: bold;
+  text-align: end;
 }
-.profile img{
+.gridSecond {
+  background-color: #eeeeee;
+  padding: 20px;
+    margin: 5%;
+  border-radius: 25px;
+}
 
-  margin-left: 10%;
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
-.details{
+
+.click {
+  margin-top: 10px;
+}
+
+.click span {
+  font-size: 14px;
+}
+
+.click a {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.profile {
   display: flex;
-  margin-top: 2%;
+  align-items: center;
+  margin-bottom: 20px;
 }
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.profile button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.profileDetails .details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profileDetails .details i {
+  margin-right: 5px;
+}
+
+.profileDetails .details p {
+  margin: 0;
+}
+
+.details p {
+  font-size: 16px;
+}
+
+
 
 .account{
   margin-left: 35%;
@@ -94,7 +134,7 @@ button:hover{
   border: none;
   border-radius: 20px;
   box-shadow:  2px 3px 62px -12px rgba(0,0,0,0.75);
-  background-color: azure;
+  background-color: rgb(178, 222, 242);
 
 }
 .update::backdrop{
@@ -105,6 +145,7 @@ button:hover{
   margin-left: 5%;
 }
 .butt{
+  margin-top: 5%;
   margin-left: 27%;
   display: flex;
 }
@@ -129,3 +170,46 @@ button:hover{
   padding: 2% 32% 2% 32%;
 }
 
+.loanStatus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@keyframes moveAnimation {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(350px); }
+  100% { transform: translateX(0); }
+}
+
+.approval-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 150vh; */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.approval-icon {
+  font-size: 60px;
+  color: #3cbc8d;
+  animation: moveAnimation 2s ease-in-out ;
+}
+
+.approval-icon1 {
+  font-size: 60px;
+  color: #ff0000;
+  animation: moveAnimation 2s ease-in-out ;
+}
+.approval-text {
+  font-size: 24px;
+  color: #333;
+  margin-left: 10px;
+}
+.message{
+  text-align: center;
+  font-weight: bolder;
+  /* transform: translateY(-310px); */
+}

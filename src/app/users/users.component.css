@@ -1,94 +1,85 @@
+/* Styles for app-adminHeader */
+app-adminHeader {
+  /* Add your styles here */
+}
+
+/* Styles for searchBar */
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+/* Styles for search */
+.search {
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for input fields */
+input[type="search"] {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Styles for buttons */
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styles for title */
+.title h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+/* Styles for table */
 table {
-  margin-top: 2%;
+  width: 90%;
   border-collapse: collapse;
-  width:100%;
+  margin-left: 5%;
 }
 
-th, td {
-  text-align: left;
-  padding: 8px;
-  border-bottom: 1px solid #777575;
-}
-td :hover{
-  background-color: #a8dcf3;
-}
+/* Styles for table headings */
 th {
-  background-color: #aad2f4;
-  font-weight: bold;
-}
-.search{
-
-  display: flex;
-  /* padding: 1%; */
-  margin-left: 13%;
-}
-.search button{
-  padding: 1% 6% 1% 4%;
-  margin-left: 4%;
-  border-radius: 10px;
-  border: none;
-  background-color:rgb(51, 147, 237) ;
-}
-td button{
-  padding: 10% ;
-  margin-left: 4%;
-  border-radius: 10px;
-  border: none;
-  background-color:rgb(51, 147, 237) ;
-}
-/* .search1{
-  display: flex;
-  /* padding: 1%;
-  margin-left: 10%;
-}*/
-.searchBar{
-  display: flex;
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: left;
 }
 
-input {
-  padding: 5px ;
-  border-radius: 8px;
-  border: 1px solid black;
-  outline: none;
+/* Styles for table data */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
-.title{
-  margin-left: 10%;
-}
-.grid{
-  display: grid;
-  grid-template-columns: 15% 85%;
 
-
-}
-.gridFirst {
-  margin-top: 36%;
-}
-.gridFirst button{
-  padding: 5% 30% 5% 30%;
-  background-color: rgb(51, 147, 237);
-  border-radius: 10px;
-  margin-top: 4%;
-  border: none;
-  border-bottom: 1px solid  #151515;
-}
-.gridFirst a{
+/* Styles for loanStatus button */
+#loanStatus a {
   text-decoration: none;
-  color: black;
-  font-size: 15px;
+  color: #fff;
 }
-.gridSecond{
-  margin-top: 2%;
-}
-.gridSecond button a{
-  text-decoration: none;
-  color: black;
-}
-#button{
-  background-color: #ecf2f6;
-  border: 1px solid black;
 
+#loanStatus  {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
-#button a
-{
-  color: red;
+
+/* Styles for delete button */
+#delete  {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }

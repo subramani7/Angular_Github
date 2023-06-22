@@ -1,8 +1,7 @@
 <app-header></app-header>
-<link rel="stylesheet" href="AccDetailsForm.component.css">
+<!-- <link rel="stylesheet" href="AccDetailsForm.component.css"> -->
 <div class="accountForms">
-
-  <form action="" [formGroup]="accountform">
+  <form [formGroup]="accountform" (ngSubmit)="submitForm()">
     <h2>Account and Loan Details</h2>
    <div class="grid">
      <div class="grid-first">
@@ -16,7 +15,7 @@
        <input type="text" id="acccountnum" name="acccountnum"  formControlName="acccountnum" required>
        <div class="errorContainer" *ngIf="accountform.controls['acccountnum'].dirty">
         <p class="error" *ngIf="accountform.controls['acccountnum'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>acccountnumber can't be blank</p>
-        <!-- <p class="error" *ngIf="accountform.controls['acccountnum'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> acccountnumber contain only number</p> -->
+        <p class="error" *ngIf="accountform.controls['acccountnum'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> acccountnumber contain only number</p>
 </div>
        <label for="  MICR">MICR code:</label>
        <input type="text" id="micr-code" name="micr-code" formControlName="micr" required>
@@ -50,6 +49,12 @@
         <p class="error" *ngIf="accountform.controls['phone'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>phone can't be blank</p>
         <p class="error" *ngIf="accountform.controls['phone'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> phone contain only number</p>
 </div>
+<label for="phone">Original documents:</label>
+<input type="url" id="original" name="original" formControlName="original" required>
+<div class="errorContainer" *ngIf="accountform.controls['original'].dirty">
+ <p class="error" *ngIf="accountform.controls['original'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>original can't be blank</p>
+ <!-- <p class="error" *ngIf="accountform.controls['original'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> original contain only number</p> -->
+</div>
      </div>
    </div>
    <div class="terms">
@@ -81,8 +86,8 @@
     <p>Documentation: Borrowers are typically required to provide supporting documents, such as proof of identity, address, educational institution admission letter, fee structure, academic records, and income-related documents.</p>
    </div>
    <div class="butt">
-    <button>Previous</button>
-    <button>Next</button>
+    <!-- <button>Previous</button> -->
+    <button [disabled]="!accountform.valid" (click)="applyLoan()">Apply</button>
    </div>
 
    </form>

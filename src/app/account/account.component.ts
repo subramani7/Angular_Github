@@ -37,7 +37,8 @@ export class AccountComponent implements OnInit {
       this.accValue=data
       alert('Form Submitted');
       this.generate(this.accValue)
-
+      let a=document.getElementById("ref");
+      a?.click();
       // this.route.navigate(['myaccount']);
     });
     // this.status=false
@@ -55,7 +56,8 @@ export class AccountComponent implements OnInit {
       id:value.id
     }
     this.http.post<any>("http://localhost:3000/bankaccount",body).subscribe(postVal=>{
-      alert("Posted")
+      alert("Posted");
+      this.ngOnInit();
     })
   }
   registerDetails:any='';
@@ -68,7 +70,22 @@ export class AccountComponent implements OnInit {
   address:any;
 
   status:any="true"
+  getDetails:any=""
+  approveDetails:any=""
   ngOnInit() {
+    const a=sessionStorage.getItem("login");
+    if(a)
+    {
+      this.getDetails=JSON.parse(a);
+    }
+    this.http.get<any>("http://localhost:3000/approveStatus").subscribe((info)=>{
+      const appDet=info.find((c:any)=>{
+        return c.name==this.getDetails.firstname
+      });
+      if(appDet){
+        this.approveDetails=appDet
+      }
+    })
     this.service.getData().subscribe((data)=>{
      this.registerDetails=data;
 
@@ -76,7 +93,7 @@ export class AccountComponent implements OnInit {
       if(this.name==this.registerDetails[i].firstname){
          console.log(this.name);
          this.idvalue=i;
-         
+
          console.log(this.idvalue);
       }
      }
@@ -99,7 +116,8 @@ export class AccountComponent implements OnInit {
      this.http.get<any>("http://localhost:3000/bankaccount/"+this.idvalue).subscribe(x=>{
       this.status=x.status;
 
-    })
+    }
+    )
     }
   )
     this.sample();

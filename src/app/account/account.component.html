@@ -1,16 +1,30 @@
 <app-header></app-header>
 <div class="grid">
   <div class="gridFirst"  >
+
+   <!-- <div class="click" *ngIf="status"> -->
+   <!-- </div> -->
    <h1>Account</h1>
-   <div class="click" *ngIf="status">
-    <span> Do not have an account...?  <a (click)="bankaccount()" style="cursor: pointer;">Click here</a> </span>
+   <span [hidden]="!(val.bankname==null || val.bankname=='' )"> Do not have an account...?  <a (click)="bankaccount()" style="cursor: pointer;">Click here</a> </span>
+  <div class="acc" >
+  <div [hidden]="(val.bankname==null || val.bankname=='' )"  class="acc1">
+  <p>Bank name:</p>
+  <p>Branch name:</p>
+  <p>AccountNumber:</p>
+  <p>IFSC code:</p>
+  <p>MICR code;</p>
+  <p>Email-id:</p>
+    </div>
+    <div [hidden]="(val.bankname==null || val.bankname=='' )"  class="acc2">
+      <p>{{val.bankname}}</p>
+      <p>{{val.branch}}</p>
+      <p>{{val.accountnumber}}</p>
+      <p>{{val.ifsccode}}</p>
+      <p>{{val.micrcode}}</p>
+      <p>{{val.email}}</p>
+    </div>
    </div>
-   <p>{{val.bankname}}</p>
-   <p>{{val.branch}}</p>
-   <p>{{val.accountnumber}}</p>
-   <p>{{val.ifsccode}}</p>
-   <p>{{val.micrcode}}</p>
-   <p>{{val.email}}</p>
+
   </div>
   <div class="gridSecond">
    <div class="profile">
@@ -19,23 +33,23 @@
    </div>
    <div class="profileDetails">
     <div class="details">
-      <p style="font-size: 23px;font-weight: bolder;color: blue; margin-bottom: 3%;">{{firstname}}</p>
+      <p style="font-size: 23px;font-weight: bolder;color: blue; margin-bottom: 3%;">{{getDetails.firstname}}</p>
     </div>
     <div class="details">
       <i class="fa-solid fa-envelope"></i>
-      <p>&nbsp;&nbsp;&nbsp;{{email}}</p>
+      <p>&nbsp;&nbsp;&nbsp;{{getDetails.email}}</p>
     </div>
     <div class="details">
       <i class="fa-solid fa-phone-volume"></i>
-      <p>&nbsp;&nbsp;&nbsp;{{phoneno}}</p>
+      <p>&nbsp;&nbsp;&nbsp;{{getDetails.Phoneno}}</p>
     </div>
     <div class="details">
       <i class="fa-solid fa-key"></i>
-      <p>&nbsp;&nbsp;&nbsp;{{password}}</p>
+      <p>&nbsp;&nbsp;&nbsp;{{getDetails.password}}</p>
     </div>
     <div class="details">
       <i class="fa-solid fa-location-dot"></i>
-      <p>&nbsp;&nbsp;&nbsp;{{address}}</p>
+      <p>&nbsp;&nbsp;&nbsp;{{getDetails.address}}</p>
     </div>
    </div>
   </div>
@@ -79,13 +93,28 @@
 <!-- </div> -->
 </dialog>
 <div class="loanStatus">
-  <h1>loan Status</h1>
-  <p>Your loan request under checking in our bank side...</p>
-  <p>Your loan status will be updated with in 72 hours...</p>
-  <p>Please wait...</p>
-
+  <h1 style="color: blue;">Loan Status</h1>
+  <div class="div" [hidden]="!(approveDetails.status==null || approveDetails.status=='')">
+    <p>If you are apply for loan..</p>
+    <p>Your loan request under checking in our bank side...</p>
+    <p>Your loan status will be updated with in 72 hours...</p>
+    <p>Please wait...</p>
+  </div>
+  <div class="div2" [hidden]="!(approveDetails.status==='Approved!')">
+    <div class="approval-container">
+      <i class="fas fa-check-circle approval-icon"></i>
+      <h2 class="approval-text">Approved - Successfully</h2>
+    </div>
+    <p class="message"> Your Loan is approved.<br> Submit your originals on bank <br>for futher process.</p>
+  </div>
+ <div class="div3" [hidden]="(approveDetails.status==='Approved!'||approveDetails.status==null || approveDetails.status=='')">
+  <div class="approval-container">
+    <i class="fa fa-times-circle-o approval-icon1"></i>
+  <h2>The loan was denied</h2>
+  </div>
+ <p class="message"> {{approveDetails.status}}</p>
 </div>
-
+</div>
  <dialog class="account">
  <h1>Create Account</h1>
  <div class="form" >
@@ -125,7 +154,7 @@
 
  </form>
 <div class="back">
-  <button  class="button" (click)="closeAccount()">back</button>
+  <button  class="button" (click)="closeAccount()" id="ref" >back</button>
 </div>
 
   </dialog>

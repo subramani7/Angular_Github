@@ -1,33 +1,71 @@
-.grid{
+.grid {
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 40% 40%;
+  gap: 20px;
+  /* margin: 20px; */
+  margin-left: 17%;
 }
+
 .gridFirst {
-  margin-top: 36%;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-.gridFirst button{
-  padding: 5% 30% 5% 30%;
-  background-color: rgb(51, 147, 237);
-  border-radius: 10px;
-  margin-top: 4%;
+
+.gridFirst p {
+  margin: 5px 30px;
+}
+.one {
+background-color:  rgb(51, 147, 237);
+padding:1rem 5rem;
+border-radius: 5px;
+color: black;
+}
+.two {
+background-color:  rgba(155, 155, 155, 0.397);
+padding:1rem 5rem;
+border-radius: 5px;
+color: black;
+}
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+.gridSecond p {
+  margin: 5px 0;
+  text-align:center;
+  /* text-transform: capitalize; */
+}
+.butt{
+  display: flex;
+  justify-content: center;
+ margin-bottom: 2%;
+}
+#approve{
+
+  padding: 10px 35px;
+  background-color: #28a745;
+  margin-right: 15%;
+  color: #fff;
   border: none;
-  border-bottom: 1px solid  #151515;
+  cursor: pointer;
 }
-.gridFirst a{
-  text-decoration: none;
-  color: black;
-  font-size: 15px;
+#denied{
+  padding: 10px 35px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
-.gridSecond{
-  margin-top: 2%;
+input{
+  padding: 10px 35px;
 }
-
-#button{
-  background-color: #ecf2f6;
-  border: 1px solid black;
-
+.head{
+  display: flex;
+  margin-top: 1%;
+  margin-left: 4%;
 }
-#button a
-{
-  color: red;
+.head h1{
+  margin-left: 35%;
 }

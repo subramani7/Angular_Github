@@ -1,0 +1,42 @@
+/* CSS for the animation */
+@keyframes spinAnimation {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeAnimation {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.info-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.icon-container {
+  font-size: 60px;
+  color: #3cbc8d;
+  animation: spinAnimation 2s linear infinite;
+}
+
+.Button{
+  border: none;
+  outline: 0;
+  font-weight: 900;
+  background-color: rgb(0, 0, 255);
+  color: white;
+  padding: 1rem 5rem;
+  border-radius: 5px;
+}
+.info-text {
+  font-size: 24px;
+  color: #333;
+  margin-top: 20px;
+  animation: fadeAnimation 2s ease-in-out infinite;
+}

@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ServiceComponent implements OnInit {
 
   constructor() { }
-
+   getDetails:any='';
   ngOnInit() {
+    const a=sessionStorage.getItem("login");
+  if(a){
+    this.getDetails=JSON.parse(a);
+  }
   }
 
 }

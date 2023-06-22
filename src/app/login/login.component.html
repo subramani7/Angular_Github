@@ -15,8 +15,8 @@
         <input type="text" placeholder="Username" id="username" formControlName="username" name="username" #username />
       </div>
       <div class="errorContainer" *ngIf="loginform.controls['username'].dirty">
-        <p class="error" *ngIf="loginform.controls['username'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>First Name can't be blank</p>
-        <p class="error" *ngIf="loginform.controls['username'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>First Name contain only alphabets</p>
+        <p class="error" *ngIf="loginform.controls['username'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Username can't be blank</p>
+        <p class="error" *ngIf="loginform.controls['username'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Username contain only alphabets</p>
       </div>
       <div class="loginusername">
         <i class="fa fa-key" aria-hidden="true"></i>

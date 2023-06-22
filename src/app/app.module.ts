@@ -33,12 +33,15 @@ import { AccDetailsFormComponent } from './Forms/AccDetailsForm/AccDetailsForm.c
 import { DocumentFormComponent } from './Forms/DocumentForm/DocumentForm.component';
 import { PersonalDetailsFormComponent } from './Forms/PersonalDetailsForm/PersonalDetailsForm.component';
 import { StudyDetailsFormComponent } from './Forms/StudyDetailsForm/StudyDetailsForm.component';
+import { LoanformdetailsComponent } from './loanformdetails/loanformdetails.component';
+import { AppliedComponent } from './applied/applied.component';
+import { AppliedDetailsComponent } from './appliedDetails/appliedDetails.component';
 
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [			
     AppComponent,
       HomeComponent,
       // AboutComponent,
@@ -68,7 +71,10 @@ import { StudyDetailsFormComponent } from './Forms/StudyDetailsForm/StudyDetails
       AccDetailsFormComponent,
       DocumentFormComponent,
       PersonalDetailsFormComponent,
-      StudyDetailsFormComponent
+      StudyDetailsFormComponent,
+      LoanformdetailsComponent,
+      AppliedComponent,
+      AppliedDetailsComponent
    ],
   imports: [
     BrowserModule,

@@ -22,6 +22,9 @@ import { AccountComponent } from './account/account.component';
 import { PersonalDetailsFormComponent } from './Forms/PersonalDetailsForm/PersonalDetailsForm.component';
 import { StudyDetailsFormComponent } from './Forms/StudyDetailsForm/StudyDetailsForm.component';
 import { AccDetailsFormComponent } from './Forms/AccDetailsForm/AccDetailsForm.component';
+import { LoanformdetailsComponent } from './loanformdetails/loanformdetails.component';
+import { AppliedComponent } from './applied/applied.component';
+import { AppliedDetailsComponent } from './appliedDetails/appliedDetails.component';
 // import { StudyDetailsFormComponent } from './form/studyDetailsForm/studyDetailsForm.component';
 
 const routes: Routes = [
@@ -87,6 +90,10 @@ const routes: Routes = [
     path:'personaldetails',
     component:PersonalDetailsFormComponent,
    },
+   {
+path:'appliedloanDetails',
+component:LoanformdetailsComponent,
+   },
   {
     path:'admin',
     component:AdminComponent,
@@ -114,6 +121,14 @@ const routes: Routes = [
   {
     path:'myaccount',
     component:AccountComponent,
+  },
+  {
+    path:'appiled',
+    component:AppliedComponent,
+  },
+  {
+    path:'appiledDetail',
+    component:AppliedDetailsComponent,
   }
 
 

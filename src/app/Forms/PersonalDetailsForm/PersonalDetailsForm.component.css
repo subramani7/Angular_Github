@@ -3,8 +3,9 @@
 .grid {
   /* Add styles for the grid container */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 45% 45%;
   gap: 20px;
+  margin-left: 8%;
 }
 
 h1{
@@ -40,11 +41,15 @@ textarea {
 }
 
 textarea {
+  width: 85%;
+  margin-left: 8%;
   /* Add styles for textarea */
   resize: vertical;
 }
 
-
+#address{
+  margin-left: 8%;
+}
 
 .error {
   /* Add styles for error messages */
@@ -58,8 +63,11 @@ textarea {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  margin-left: 8%;
 }
-
+#button{
+  margin-right: 8%;
+}
 button {
   /* Add styles for buttons */
   padding: 10px 20px;

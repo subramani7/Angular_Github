@@ -1,0 +1,158 @@
+<app-header></app-header>
+<!-- {{getDetails|json}} -->
+<!-- {{getDetailsone|json}} -->
+<!-- <link rel="stylesheet" href="loanformdetails.component.css"> -->
+<h3>Applied details for Education loan </h3>
+<h1>Personal details</h1>
+<div class="grid">
+  <div  class="gridFirst">
+   <p>First name :</p>
+   <p>Last name:</p>
+   <p>Date of birth:</p>
+   <p>Age:</p>
+   <p>Father name:</p>
+   <p>Father oocupation:</p>
+   <p>Mother name:</p>
+   <p>Mother occupation:</p>
+   <p>Annual CTC:</p>
+   <p>Sex:</p>
+   <p>Blood group:</p>
+   <p>Phone number:</p>
+<p>Address:</p>
+</div>
+  <div class="gridSecond">
+   <!-- <p><input type="text" [(ngModel)]="detailOne.firstname"></p> -->
+   <p>{{detailOne.firstname}}</p>
+  <!-- <p><input type="text" [(ngModel)]="detailOne.lastname"></p>
+  <p> <input type="text" [(ngModel)]="detailOne.dob"></p>
+  <p><input type="text" [(ngModel)]="detailOne.age"></p>
+  <p> <input type="text" [(ngModel)]="detailOne.fathername"></p>
+  <p> <input type="text" [(ngModel)]="detailOne.fatheroccupation"></p>
+  <p><input type="text" [(ngModel)]="detailOne.mothername"></p>
+  <p><input type="text" [(ngModel)]="detailOne.motheroccupation"></p>
+  <p><input type="text" [(ngModel)]="detailOne.ctc"></p>
+  <p><input type="text" [(ngModel)]="detailOne.sex"></p>
+  <p> <input type="text" [(ngModel)]="detailOne.bloodgrp"></p>
+  <p><input type="text" [(ngModel)]="detailOne.Phoneno"></p>
+  <p><input type="text" [(ngModel)]="detailOne.address"></p> -->
+   <p>{{detailOne.lastname}}</p>
+   <p>{{detailOne.dob}}</p>
+   <p>{{detailOne.age}}</p>
+   <p>{{detailOne.fathername}}</p>
+   <p>{{detailOne.fatheroccupation}}</p>
+   <p>{{detailOne.mothername}}</p>
+   <p>{{detailOne.motheroccupation}}</p>
+   <p>{{detailOne.ctc}}</p>
+   <p>{{detailOne.sex}}</p>
+   <p>{{detailOne.bloodgrp}}</p>
+   <p>{{detailOne.Phoneno}}</p>
+   <p>{{detailOne.address}}</p>
+  </div>
+</div>
+<!-- <button (click)="detailOneUpdate()">Update</button> -->
+<h1>Study details</h1>
+<h2>SSLC</h2>
+<div class="grid">
+  <div class="gridFirst">
+   <p>Register NO:</p>
+   <p>School Name:</p>
+   <p>SSLC mark:</p>
+   <p>Year of passing:</p>
+   <p>Marksheet No:</p>
+   <p> School district:</p>
+   <p> SSLC percentage:</p>
+  </div>
+  <div class="gridSecond">
+    <p>{{detailTwo.sslcregNo}}</p>
+    <p>{{detailTwo.SSLCschoolName}}</p>
+    <p>{{detailTwo.SSLCMark}}</p>
+    <p>{{detailTwo.SSLCyearOfPassing}}</p>
+    <p>{{detailTwo.SSLCmarksheetNo}}</p>
+    <p>{{detailTwo.SSLCDistrict}}</p>
+    <p>{{detailTwo.SSLCPercentage}}</p>
+
+  </div>
+</div>
+<h2>HSC</h2>
+<div class="grid">
+  <div class="gridFirst">
+    <p>Register NO:</p>
+    <p>School Name:</p>
+    <p>HSC mark:</p>
+    <p>Year of passing:</p>
+    <p>Marksheet No:</p>
+    <p>School district:</p>
+    <p>HSC percentage:</p>
+  </div>
+  <div class="gridSecond">
+    <p>{{detailTwo.hscregNo}}</p>
+    <p>{{detailTwo.HSCschoolName}}</p>
+    <p>{{detailTwo.HSCMark}}</p>
+    <p>{{detailTwo.HSCyearOfPassing}}</p>
+    <p>{{detailTwo.HSCmarksheetNo}}</p>
+    <p>{{detailTwo.HSCDistrict}}</p>
+    <p>{{detailTwo.HSCPercentage}}</p>
+  </div>
+</div>
+<h2>COLLEGE</h2>
+<div class="grid">
+  <div class="gridFirst">
+    <p>Course:</p>
+   <p> Register no:</p>
+   <p>College name:</p>
+   <p>Current semester:</p>
+   <p>Year of passing:</p>
+   <p>Pincode:</p>
+   <p>Department name:</p>
+   <p>Current CGPA:</p>
+   <p>Current year:</p>
+   <p>Backlogs:</p>
+   <p>College district:</p>
+   <p>Address:</p>
+
+  </div>
+  <!-- {{detailTwo|json}} -->
+  <div class="gridSecond">
+
+   <p>{{detailTwo.course}}</p>
+   <p>{{detailTwo.collegeregNo}}</p>
+   <p>{{detailTwo.clgName}}</p>
+   <p>{{detailTwo.sem}}</p>
+   <p>{{detailTwo.CLGyearOfPassing}}</p>
+   <p>{{detailTwo.pincode}}</p>
+   <p>{{detailTwo.deptName}}</p>
+   <p>{{detailTwo.cgpa}}</p>
+   <p>{{detailTwo.currentYear}}</p>
+   <p>{{detailTwo.backlogs}}</p>
+   <p>{{detailTwo.CLGDistrict}}</p>
+   <p>{{detailTwo.address}}</p>
+  </div>
+</div>
+<!-- <button>Update</button> -->
+<h1>Account details</h1>
+<div class="grid">
+  <div class="gridFirst">
+<p>Bank name:</p>
+<p> Branch name:</p>
+<p>Account no:</p>
+<p> MICR code:</p>
+<p> IFSC code:</p>
+<p>Phone no:</p>
+<p> AMT reguired * (As per the fees structure):</p>
+<p>Original document link:</p>
+  </div>
+  <div class="gridSecond">
+<p>{{detailThree.bankname}}</p>
+<p>{{detailThree.branchname}}</p>
+<p>{{detailThree.acccountnum}}</p>
+<p>{{detailThree.micr}}</p>
+<p>{{detailThree.ifsc}}</p>
+<p>{{detailThree.phone}}</p>
+<p>{{detailThree.Amount}}</p>
+<p>{{detailThree.original}}</p>
+  </div>
+</div>
+<br>
+<!-- {{detailThree|json}} -->
+<button routerLink="/home">Back To Home</button>
+<br>

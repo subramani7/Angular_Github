@@ -16,8 +16,8 @@
         <label for="scl-name">School Name:</label>
         <input type="text" id="scl-name" name="scl-name" formControlName="SSLCschoolName" required>
         <div class="errorContainer" *ngIf="studyForm.controls['SSLCschoolName'].dirty">
-          <p class="error" *ngIf="studyForm.controls['SSLCschoolName'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>schoolName can't be blank</p>
-          <p class="error" *ngIf="studyForm.controls['SSLCschoolName'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>schoolName contain only alphabets</p>
+          <p class="error" *ngIf="studyForm.controls['SSLCschoolName'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Schoolname can't be blank</p>
+          <p class="error" *ngIf="studyForm.controls['SSLCschoolName'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Schoolname contain only alphabets</p>
   </div>
 
         <label for="mark">SSLC mark:</label>
@@ -208,7 +208,7 @@
 
    <div class="butt">
      <button (click)="Previous()">Previous</button>
-     <button >Next</button>
+     <button id="button" [disabled]="!studyForm.valid" >Next</button>
    </div>
     <!-- Add submit button or additional form controls here -->
   </form>

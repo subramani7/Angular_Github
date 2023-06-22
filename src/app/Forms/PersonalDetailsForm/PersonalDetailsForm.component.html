@@ -36,7 +36,7 @@
   </div>
 
         <label for="ctc">Annual CTC:</label>
-        <input type="number" id="ctc" name="ctc" formControlName="ctc" required>
+        <input type="number" id="ctc" name="ctc" formControlName="ctc" maxlength="7" required>
         <div class="errorContainer" *ngIf="personalForms.controls['ctc'].dirty">
           <p class="error" *ngIf="personalForms.controls['ctc'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>CTC can't be blank</p>
           <p class="error" *ngIf="personalForms.controls['ctc'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i> Enter valid CTC</p>
@@ -109,7 +109,7 @@
   </div>
       </div>
     </div>
-    <label for="address">Address:</label>
+    <label for="address" id="address">Address:</label>
     <textarea id="address" name="address" formControlName="address"></textarea>
     <div class="errorContainer" *ngIf="personalForms.controls['address'].dirty">
       <p class="error" *ngIf="personalForms.controls['address'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>address can't be blank</p>
@@ -118,7 +118,7 @@
 
     <div class="butt">
       <button (click)="backPage()">back</button>
-      <button  >Next</button>
+      <button id="button" [disabled]="!personalForms.valid" >Next</button>
     </div>
 
   </form>

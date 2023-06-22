@@ -4,6 +4,7 @@
   padding-left: 17%;
   width: 100%;
   background-color: rgb(51, 147, 237);
+  border-bottom: 1px solid rgb(41, 39, 39);
 }
 
 .header img {
@@ -26,10 +27,13 @@
   font-size: 20px;
   color: rgb(0, 0, 0);
   text-align: center;
+  margin-bottom: 2%;
   padding: 10px 16px;
   text-decoration: none;
 }
-
+.navbar i{
+  padding-bottom: 2%;
+}
 .dropdown {
   float: left;
   overflow: hidden;
