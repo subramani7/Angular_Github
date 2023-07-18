@@ -1,4 +1,13 @@
 <app-header></app-header>
+<div class="pop-up-container" *ngIf="popup">
+  <i class="fas fa-times" (click)="closepopup()" ></i>
+  <div class="pop-up-content">
+  <h1>Hai !! Thank you for visiting our website <i class="fa-sharp fa-solid fa-face-laugh"></i></h1><br>
+  <h2 class="heading">“We learn from failure, not from success!”</h2>
+  <br><h3><br><br> Please view the loan services and enjoy reading</h3>
+  <button>Get started </button>
+</div>
+</div>
 <div class="homeImg">
   <img src="../../assets/Images/green.png" alt="">
   <div class="homecontent">

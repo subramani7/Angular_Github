@@ -264,3 +264,37 @@ footer{
     font-size: 18px;
   }
 }
+.pop-up-container {
+  width: 50%;
+  height: 40vh;
+  background: #bed1ed;
+  margin-left: 25%;
+  margin-top: 5%;
+  text-align: center;
+  border-radius: 20px;
+  position: fixed;
+}
+
+.pop-up-container .fa-times{
+  float: right;
+  padding: 2.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgba(165, 42, 42, 0.622);
+}
+
+.pop-up-container .fa-times:hover{
+  color: red;
+}
+.pop-up-container .pop-up-content h1 {
+  padding-top: 5rem;
+  color: #503730;
+
+
+}
+
+.pop-up-content h3 {
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgba(165, 42, 42, 0.622);
+}

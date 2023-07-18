@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidateService } from '../validate.service';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-account',
-  templateUrl: './account.component.html',
-  styleUrls: ['./account.component.css']
+  selector: 'app-updateProfile',
+  templateUrl: './updateProfile.component.html',
+  styleUrls: ['./updateProfile.component.css']
 })
-export class AccountComponent implements OnInit {
-    update:FormGroup
-    Account:FormGroup
+export class UpdateProfileComponent implements OnInit {
+  update:FormGroup
+    // Account:FormGroup
    name:any=sessionStorage.getItem('firstname');
   constructor(private service:ValidateService,private form:FormBuilder,private http:HttpClient,private route:Router) {
     this.update=this.form.group({
@@ -22,44 +22,44 @@ export class AccountComponent implements OnInit {
       confirm:[,Validators.required],
     address:[,Validators.required],
     })
-    this.Account=this.form.group({
-     // name:[,Validators.required],
-      Pname:[,Validators.required],
-     // phone:[,Validators.required],
-     // email:[,Validators.required],
-      pan:[,Validators.required],
-      aadhar:[,Validators.required]
-    })
+    // this.Account=this.form.group({
+    //  // name:[,Validators.required],
+    //   Pname:[,Validators.required],
+    //  // phone:[,Validators.required],
+    //  // email:[,Validators.required],
+    //   pan:[,Validators.required],
+    //   aadhar:[,Validators.required]
+    // })
   }
-  accValue:any=""
-  accountSubmit() {
-    this.service.addAccountInfo(this.Account.value).subscribe((data) => {
-      this.accValue=data
-      alert('Form Submitted');
-      this.generate(this.accValue)
-      let a=document.getElementById("ref");
-      a?.click();
-      // this.route.navigate(['myaccount']);
-    });
-    // this.status=false
-  }
+  // accValue:any=""
+  // accountSubmit() {
+  //   this.service.addAccountInfo(this.Account.value).subscribe((data) => {
+  //     this.accValue=data
+  //     alert('Form Submitted');
+  //     this.generate(this.accValue)
+  //     let a=document.getElementById("ref");
+  //     a?.click();
+  //     // this.route.navigate(['myaccount']);
+  //   });
+  //   // this.status=false
+  // }
 
-  generate(value:any){
-    var body={
-      bankname: "ELMS Bank",
-      branch: "Salem",
-      accountnumber: "636015000"+value.id,
-      ifsccode: "ELMS0000ES1",
-      micrcode: "636006001",
-      email: this.update.value.email,
-      status:"false",
-      id:value.id
-    }
-    this.http.post<any>("http://localhost:3000/bankaccount",body).subscribe(postVal=>{
-      alert("Posted");
-      this.ngOnInit();
-    })
-  }
+  // generate(value:any){
+  //   var body={
+  //     bankname: "ELMS Bank",
+  //     branch: "Salem",
+  //     accountnumber: "636015000"+value.id,
+  //     ifsccode: "ELMS0000ES1",
+  //     micrcode: "636006001",
+  //     email: this.update.value.email,
+  //     status:"false",
+  //     id:value.id
+  //   }
+  //   this.http.post<any>("http://localhost:3000/bankaccount",body).subscribe(postVal=>{
+  //     alert("Posted");
+  //     this.ngOnInit();
+  //   })
+  // }
   registerDetails:any='';
   idvalue:any;
   firstname:any;
@@ -136,7 +136,7 @@ accEmail:any=""
         this.x(aEmail);
       }
     });
-    // this.ngOnInit();
+
 
   }
   x(email:any){
@@ -175,7 +175,9 @@ accEmail:any=""
       //   this.update.controls['address'].setValue(Response.address);
       // }
       // )
-      this.route.navigate(['/login']);
+
+      this.route.navigate(['/profile']);
+      this.ngOnInit();
     })
 
    }
@@ -183,28 +185,6 @@ accEmail:any=""
     alert("Data is not modified");
    }
 
-  }
-  profileUpdate(){
-    const profile:any= document.querySelector(".update");
-    profile.showModal();
-  }
-  closeProfile(){
-    const close:any =document.querySelector(".update");
-    close.close();
-  }
-  bankaccount(){
-    const acc:any= document.querySelector(".account");
-    acc.showModal();
-  }
-  closeAccount(){
-    const close:any =document.querySelector(".account");
-    close.close();
-  }
+   }
+
 }
-// "firstname": "mani",
-//       "Phoneno": "8610209535",
-//       "email": "crazysanty007@gmail.com",
-//       "password": "Mani@123",
-//       "confirm": "Mani@123",
-//       "address": "ksr college of engineering",
-//       "id": 9

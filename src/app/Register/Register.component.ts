@@ -20,15 +20,15 @@ export class RegisterComponent {
     this.route.navigate(['/login']);
   }
 
-  RegisterForm = new FormGroup({
-    firstname: new FormControl(),
-    Phoneno: new FormControl(),
-    email: new FormControl(),
-    password: new FormControl(),
-    confirm: new FormControl(),
-    address:new FormControl(),
-    image:new FormControl(),
-  });
+  // RegisterForm = new FormGroup({
+  //   firstname: new FormControl(),
+  //   Phoneno: new FormControl(),
+  //   email: new FormControl(),
+  //   password: new FormControl(),
+  //   confirm: new FormControl(),
+  //   address:new FormControl(),
+  //   image:new FormControl(),
+  // });
 
   constructor(
     private fb: FormBuilder,

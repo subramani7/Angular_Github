@@ -25,13 +25,12 @@
   "users": [
     {
       "firstname": "Harigokul",
-      "Phoneno": "9489922628",
+      "Phoneno": "8610209533",
       "email": "hari007@gmail.com",
       "password": "Hari@123",
       "confirm": "Hari@123",
-      "address": "salem",
-      "id": 1,
-      "registerstatus": "success"
+      "address": "salem-15\n",
+      "id": 1
     },
     {
       "firstname": "Manikandan",
@@ -51,6 +50,15 @@
       "address": "19/1,mettu street no.2,thiruchengode,namakal-637211",
       "id": 3,
       "registerstatus": "success"
+    },
+    {
+      "firstname": "Subramani",
+      "Phoneno": "8610209535",
+      "email": "crazysanty007@gmail.com",
+      "password": "Santy@123",
+      "confirm": "Santy@123",
+      "address": "salem",
+      "id": 4
     }
   ],
   "account": [
@@ -235,12 +243,5 @@
       "id": 2
     }
   ],
-  "approveStatus": [
-    {
-      "name": "Harigokul",
-      "phoneNo": "9489922628",
-      "status": "Approved!",
-      "id": 1
-    }
-  ]
+  "approveStatus": []
 }

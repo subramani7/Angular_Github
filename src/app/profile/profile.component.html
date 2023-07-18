@@ -1,0 +1,71 @@
+<app-header></app-header>
+<h1>Profile</h1>
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+    <div class="row container d-flex justify-content-center">
+      <div class="col-xl-6 col-md-12">
+        <div class="card user-card-full">
+          <div class="row m-l-0 m-r-0">
+            <div class="col-sm-4 bg-c-lite-green user-profile">
+              <div class="card-block text-center text-white">
+                <div class="m-b-25">
+                  <img
+                    src="https://img.icons8.com/bubbles/100/000000/user.png"
+                    class="img-radius"
+                    alt="User-Profile-Image"
+                  />
+                </div>
+                <h6 class="f-w-600">{{getDetails.firstname}}</h6>
+                <!-- <p>Web Designer</p> -->
+                <i
+                  class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"
+                ></i>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="card-block">
+                <h6 class="info">Information</h6>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <p >Email</p>
+                    <h6 class=" text-muted f-w-400">{{getDetails.email}}</h6>
+                  </div>
+                  <div class="col-sm-6">
+                    <p>Phone</p>
+                    <h6 class=" text-muted f-w-400">{{getDetails.Phoneno}}</h6>
+                  </div>
+                  <div class="col-sm-6">
+                    <p >Password</p>
+                    <h6 class="text-muted f-w-400">{{getDetails.password}}</h6>
+                  </div>
+                  <div class="col-sm-6">
+                    <p >Address</p>
+                    <h6 class="text-muted f-w-400">{{getDetails.address}}</h6>
+                  </div>
+
+                </div>
+                <ul class="social">
+                  <li>
+                    <i class="fa-2x fa-brands fa-instagram"></i>
+                  </li>
+                  <li>
+                    <i class="fa-2x fa-brands fa-facebook"></i>
+                  </li>
+                  <li>
+                    <i class="fa-2x fa-brands fa-twitter"></i>
+                  </li>
+                  <li>
+                    <i class="fa-2x fa-brands fa-whatsapp"></i>
+                  </li>
+
+                </ul>
+                <button routerLink="/updateprofile">Update profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

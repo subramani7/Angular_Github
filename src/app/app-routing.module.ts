@@ -25,6 +25,8 @@ import { AccDetailsFormComponent } from './Forms/AccDetailsForm/AccDetailsForm.c
 import { LoanformdetailsComponent } from './loanformdetails/loanformdetails.component';
 import { AppliedComponent } from './applied/applied.component';
 import { AppliedDetailsComponent } from './appliedDetails/appliedDetails.component';
+import { ProfileComponent } from './profile/profile.component';
+import { UpdateProfileComponent } from './updateProfile/updateProfile.component';
 // import { StudyDetailsFormComponent } from './form/studyDetailsForm/studyDetailsForm.component';
 
 const routes: Routes = [
@@ -129,7 +131,15 @@ component:LoanformdetailsComponent,
   {
     path:'appiledDetail',
     component:AppliedDetailsComponent,
-  }
+  },
+  {
+    path:'profile',
+    component:ProfileComponent,
+  },
+{
+  path:'updateprofile',
+  component:UpdateProfileComponent,
+}
 
 
 

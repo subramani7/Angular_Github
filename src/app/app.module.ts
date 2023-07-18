@@ -36,12 +36,14 @@ import { StudyDetailsFormComponent } from './Forms/StudyDetailsForm/StudyDetails
 import { LoanformdetailsComponent } from './loanformdetails/loanformdetails.component';
 import { AppliedComponent } from './applied/applied.component';
 import { AppliedDetailsComponent } from './appliedDetails/appliedDetails.component';
+import { ProfileComponent } from './profile/profile.component';
+import { UpdateProfileComponent } from './updateProfile/updateProfile.component';
 
 
 
 
 @NgModule({
-  declarations: [			
+  declarations: [					
     AppComponent,
       HomeComponent,
       // AboutComponent,
@@ -74,7 +76,9 @@ import { AppliedDetailsComponent } from './appliedDetails/appliedDetails.compone
       StudyDetailsFormComponent,
       LoanformdetailsComponent,
       AppliedComponent,
-      AppliedDetailsComponent
+      AppliedDetailsComponent,
+      ProfileComponent,
+      UpdateProfileComponent
    ],
   imports: [
     BrowserModule,
