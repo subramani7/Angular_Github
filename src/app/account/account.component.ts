@@ -34,7 +34,7 @@ export class AccountComponent implements OnInit {
   accValue:any=""
   accountSubmit() {
     this.service.addAccountInfo(this.Account.value).subscribe((data) => {
-      this.accValue=data
+      this.accValue=data;
       alert('Form Submitted');
       this.generate(this.accValue)
       let a=document.getElementById("ref");
@@ -184,14 +184,7 @@ accEmail:any=""
    }
 
   }
-  profileUpdate(){
-    const profile:any= document.querySelector(".update");
-    profile.showModal();
-  }
-  closeProfile(){
-    const close:any =document.querySelector(".update");
-    close.close();
-  }
+
   bankaccount(){
     const acc:any= document.querySelector(".account");
     acc.showModal();

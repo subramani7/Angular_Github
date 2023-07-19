@@ -42,11 +42,11 @@
       "id": 2
     },
     {
-      "firstname": "Aathmiga",
+      "firstname": "santhosh",
       "Phoneno": "6380426608",
-      "email": "aathmiga24@gmail.com",
-      "password": "Aathmiga@111",
-      "confirm": "Aathmiga@111",
+      "email": "santy001@gmail.com",
+      "password": "Santy@111",
+      "confirm": "Santy@111",
       "address": "19/1,mettu street no.2,thiruchengode,namakal-637211",
       "id": 3,
       "registerstatus": "success"
@@ -105,33 +105,17 @@
     {
       "bankname": "ELMS Bank",
       "branch": "Salem",
-      "accountnumber": "6360150004",
+      "accountnumber": "6360150003",
       "ifsccode": "ELMS0000ES1",
       "micrcode": "636006001",
-      "email": "aathmiga24@gmail.com",
+      "email": "santy001@gmail.com",
       "status": "false",
       "id": 3
     }
   ],
   "personalInfo": [
     {
-      "firstname": "Harigokul",
-      "lastname": "S",
-      "dob": "2000-06-22",
-      "age": 23,
-      "fathername": "Srinivasan",
-      "mothername": "padmavathi",
-      "fatheroccupation": "weaver",
-      "motheroccupation": "NA",
-      "ctc": 72000,
-      "sex": "Male",
-      "bloodgrp": "o+",
-      "Phoneno": "9489922628",
-      "address": "13,thirunanam nagar 5,dadapatty,salem - 636 006",
-      "id": 1
-    },
-    {
-      "firstname": "Aathmiga",
+      "firstname": "santhosh",
       "lastname": "M",
       "dob": "2002-01-24",
       "age": 22,
@@ -148,35 +132,6 @@
     }
   ],
   "studyInfo": [
-    {
-      "sslcregNo": "18962345",
-      "hscregNo": "18962345",
-      "collegeregNo": "1914010",
-      "SSLCschoolName": "Jayarani matric Hr sec school",
-      "HSCschoolName": "Jayarani matric Hr sec school",
-      "SSLCMark": "384",
-      "HSCMark": "384",
-      "SSLCyearOfPassing": "2017",
-      "HSCyearOfPassing": "2017",
-      "CLGyearOfPassing": "2027",
-      "SSLCmarksheetNo": "895623",
-      "HSCmarksheetNo": "895623",
-      "SSLCDistrict": "salem",
-      "HSCDistrict": "salem",
-      "CLGDistrict": "namakal",
-      "SSLCPercentage": "78",
-      "HSCPercentage": "78",
-      "course": "engineering",
-      "clgName": "KSR COLLEGE OF ENGINEERING",
-      "sem": "1",
-      "pincode": "637015",
-      "deptName": "EEE",
-      "cgpa": "91",
-      "currentYear": "1",
-      "backlogs": "NA",
-      "address": "K S Rkalvi nagar, Tiruchengode",
-      "id": 1
-    },
     {
       "sslcregNo": "15896458",
       "hscregNo": "7894611",
@@ -210,17 +165,6 @@
   "accFormInfo": [
     {
       "bankname": "ELMS",
-      "acccountnum": "11345677",
-      "micr": "143ryhvw",
-      "Amount": "80000",
-      "branchname": "Gugai",
-      "ifsc": "11e6576",
-      "phone": "9489922628",
-      "original": "https://drive.google.com/file/d/1C-AB_rJYHxhAYe5WTskHUqp-DWyGbErh/view?ts=6492d389",
-      "id": 1
-    },
-    {
-      "bankname": "ELMS",
       "acccountnum": "6360150004",
       "micr": "636006001",
       "Amount": "80000",
@@ -233,15 +177,12 @@
   ],
   "ValidId": [
     {
-      "validID": 1,
-      "registerstatus": "success",
-      "id": 1
-    },
-    {
       "validID": 3,
       "registerstatus": "success",
       "id": 2
     }
   ],
-  "approveStatus": []
+  "approveStatus": [
+
+  ]
 }

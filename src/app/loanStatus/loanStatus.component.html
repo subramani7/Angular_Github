@@ -1,0 +1,28 @@
+
+<app-header></app-header>
+<div class="wait" *ngIf="this.status=='true'" >
+  <p class="message">
+    If you're applied for loan...
+    Please wait for 72 hours...
+  </p>
+</div>
+<div class="success" *ngIf="approveDetails.status=='Approved!'" >
+  <div class="approval-container">
+    <i class="fas fa-check-circle approval-icon"></i>
+    <h2 class="approval-text">Approved - Successfully</h2>
+  </div>
+  <p class="message"> Your Loan is approved.<br> Submit your originals on bank <br>for futher process.</p>
+</div>
+<div class="denied"  *ngIf="!(approveDetails.status=='Approved!')">
+  <div class="approval-container">
+    <!-- <i class="fas fa-check-circle denied-icon"></i> -->
+    <i class="fa fa-ban denied-icon" aria-hidden="true"></i>
+
+    <h2 class="approval-text">Approved - Unsuccessfully</h2>
+  </div>
+  <p class="message"> Your Loan is denied.<br> Because <span style="color: red;"> {{approveDetails.status}}</span> is wrong <br>Please re-apply  the loan.... </p>
+</div>
+
+<app-footer></app-footer>
+
+

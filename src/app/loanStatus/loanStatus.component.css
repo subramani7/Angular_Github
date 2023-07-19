@@ -1,0 +1,51 @@
+
+
+@keyframes moveAnimation {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(350px); }
+  100% { transform: translateX(0); }
+}
+
+.approval-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.approval-icon {
+  font-size: 60px;
+  color: #3cbc8d;
+  animation: moveAnimation 2s ease-in-out ;
+}
+.denied-icon{
+  font-size: 60px;
+  color: red;
+  animation: moveAnimation 2s ease-in-out ;
+}
+.approval-text {
+  font-size: 24px;
+  color: #333;
+  margin-left: 10px;
+}
+.message{
+  text-align: center;
+
+  font-size: 25px;
+  font-weight: bold;
+}
+.wait{
+margin-top: 20%;
+margin-bottom: 20%;
+}
+.success
+{
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.denied{
+  margin-top: 15%;
+  margin-bottom: 15%;
+}

@@ -1,56 +1,156 @@
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-}
 
-.gridFirst {
-  background-color: #eeeeee;
-  padding: 20px;
-  margin: 5%;
-  border-radius: 25px;
-}
-.gridFirst h1{
-  margin-left: 35%;
-  color: blue;
-}
 .acc{
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 48% 50%;
   grid-gap: 20px;
 }
 .acc1{
   font-weight: bold;
   text-align: end;
 }
-.gridSecond {
-  background-color: #eeeeee;
-  padding: 20px;
-    margin: 5%;
-  border-radius: 25px;
-}
 
+.acc2 p{
+  color: #919aa3 !important;
+}
 h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.click {
-  margin-top: 10px;
-}
-
-.click span {
-  font-size: 14px;
-}
-
-.click a {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
+  text-align: center;
 }
 
 p {
   margin: 10px 0;
 }
 
+/* Global styles */
+
+
+/* Container for the content */
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styles for the account section */
+
+.accountContent {
+  border: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+img{
+margin-left: 32%;
+margin-top: 3%;
+}
+.img{
+
+background: linear-gradient(to right, #4fabd8, #185889);
+}
+.accountContent h1{
+  text-align: center;
+  background: linear-gradient(to right, #4fabd8, #185889);
+  font-size: 24px;
+  padding-top: 5%;
+  /* margin: 0; */
+  padding-bottom: 5%;
+}
+
+span {
+  /* display: block; */
+
+  padding-bottom: 10px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Styles for the account details section */
+
+/* Global styles */
+
+
+
+/* Styles for the dialog container */
+
+.account {
+  max-width: 800px;
+  margin-top: 6%;
+  margin-left: 29%;
+  /* padding: 20px; */
+  border: none;
+  border-radius: 5px;
+  padding-bottom: 20px;
+
+}
+
+.account h1 {
+  text-align: center;
+  background: linear-gradient(to right, #4fabd8, #185889);
+  font-size: 24px;
+  padding-top: 5%;
+  /* margin: 0; */
+  padding-bottom: 5%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.form {
+
+ display: grid;
+ grid-template-columns: 50% 50%;
+ /* gap: 20px; */
+  /* padding: 10px 0; */
+
+}
+.form p{
+  color: #919aa3 !important;
+}
+
+label {
+  padding-top: 2%;
+  font-size: 20px;
+  font-weight:500 ;
+  width: 420px;
+  /* padding-right: 10px; */
+  text-align: center;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styles for the submit button */
+
+button {
+margin-left: 35%;
+  padding: 10px 80px;
+  background-color:#185889;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Styles for the back button */
+
+
+.button {
+  margin-left: 35%;
+  padding: 10px 85px;
+  background-color:#185889;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add additional styling for hover, active states, and other interactions as needed */

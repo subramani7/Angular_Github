@@ -38,12 +38,10 @@ import { AppliedComponent } from './applied/applied.component';
 import { AppliedDetailsComponent } from './appliedDetails/appliedDetails.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateProfileComponent } from './updateProfile/updateProfile.component';
-
-
-
-
+import { LoanStatusComponent } from './loanStatus/loanStatus.component';
+import { AuthGuard } from './auth.guard';
 @NgModule({
-  declarations: [					
+  declarations: [
     AppComponent,
       HomeComponent,
       // AboutComponent,
@@ -78,7 +76,8 @@ import { UpdateProfileComponent } from './updateProfile/updateProfile.component'
       AppliedComponent,
       AppliedDetailsComponent,
       ProfileComponent,
-      UpdateProfileComponent
+      UpdateProfileComponent,
+      LoanStatusComponent
    ],
   imports: [
     BrowserModule,
@@ -88,7 +87,7 @@ import { UpdateProfileComponent } from './updateProfile/updateProfile.component'
     HttpClientModule
     // Swiper,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

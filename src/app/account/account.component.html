@@ -1,10 +1,15 @@
 <app-header></app-header>
-<div class="grid">
-  <div class="gridFirst"  >
+<h1>Account</h1>
+<div class="content">
+  <div class="accountContent">
 
    <!-- <div class="click" *ngIf="status"> -->
    <!-- </div> -->
-   <h1>Account</h1>
+   <div class="img">
+    <img src="../assets/Images/bankacc.png" alt="" width="200px" height="100px">
+   </div>
+
+   <h1>{{getDetails.firstname}}</h1>
    <span [hidden]="!(val.bankname==null || val.bankname=='' )"> Do not have an account...?  <a (click)="bankaccount()" style="cursor: pointer;">Click here</a> </span>
   <div class="acc" >
   <div [hidden]="(val.bankname==null || val.bankname=='' )"  class="acc1">
@@ -26,46 +31,54 @@
    </div>
 
 </div>
+</div>
  <dialog class="account">
  <h1>Create Account</h1>
  <div class="form" >
   <label for="Name">Name:</label>
   <!-- <input type="text" formControlName="name"  > -->
-  {{firstname}}
+<p> {{getDetails.firstname}}</p>
 </div>
 <div class="form">
   <label for="phone"> PhoneNo:</label>
   <!-- <input type="text" formControlName="phone" > -->
-  {{phoneno}}
+<p> {{getDetails.Phoneno}}</p>
 </div>
 <div class="form">
   <label for="email">EmailID:</label>
   <!-- <input type="email" formControlName="email" > -->
-  {{email}}
+<p> {{getDetails.email}}</p>
 </div>
  <form action=""(ngSubmit)="accountSubmit()" [formGroup]="Account">
 
   <div class="form">
     <label for="Pname">Parent name:</label>
-    <input type="text"  formControlName="Pname"  >
+  <p> <input type="text"  formControlName="Pname"  ></p>
   </div>
 
   <div class="form">
     <label for="pan">PAN no:</label>
-    <input type="text" formControlName="pan">
+  <p> <input type="text" formControlName="pan"></p>
   </div>
   <div class="form">
     <label for="aadhar">Aadhar no:</label>
-    <input type="text" formControlName="aadhar">
+  <p><input type="text" formControlName="aadhar"></p>
   </div>
   <br>
 
 
    <button  [disabled]="!Account.valid">Create</button>
 
- </form>
-<div class="back">
-  <button  class="button" (click)="closeAccount()" id="ref" >back</button>
-</div>
 
+ </form>
+ <br>
+ <button  class="button" (click)="closeAccount()" id="ref" >back</button>
   </dialog>
+
+<br>
+<br>
+<br><br>
+<br><br><br><br> <br>
+
+
+  <app-footer></app-footer>

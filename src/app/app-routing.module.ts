@@ -27,6 +27,7 @@ import { AppliedComponent } from './applied/applied.component';
 import { AppliedDetailsComponent } from './appliedDetails/appliedDetails.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateProfileComponent } from './updateProfile/updateProfile.component';
+import { LoanStatusComponent } from './loanStatus/loanStatus.component';
 // import { StudyDetailsFormComponent } from './form/studyDetailsForm/studyDetailsForm.component';
 
 const routes: Routes = [
@@ -139,6 +140,10 @@ component:LoanformdetailsComponent,
 {
   path:'updateprofile',
   component:UpdateProfileComponent,
+},
+{
+  path:'loanstatus',
+  component:LoanStatusComponent,
 }
 
 
